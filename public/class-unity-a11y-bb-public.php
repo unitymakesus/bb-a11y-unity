@@ -73,7 +73,7 @@ class Unity_A11y_Bb_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'css/unity-a11y-bb-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'css/unity-a11y-bb-public.css', [], $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class Unity_A11y_Bb_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'js/unity-a11y-bb-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'js/unity-a11y-bb-public.js', ['jquery'], $this->version, false );
 
 	}
 

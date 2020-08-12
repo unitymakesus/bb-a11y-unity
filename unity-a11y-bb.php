@@ -36,6 +36,8 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'UNITY_A11Y_BB_VERSION', '1.0.0' );
+define( 'UNITY_A11Y_BB_DIR', plugin_dir_path( __FILE__ ) );
+define( 'UNITY_A11Y_BB_URL', plugins_url( '/', __FILE__ ) );
 
 /**
  * The code that runs during plugin activation.

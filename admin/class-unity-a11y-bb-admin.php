@@ -73,7 +73,7 @@ class Unity_A11y_Bb_Admin {
          * class.
          */
 
-        wp_enqueue_style( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'css/unity-a11y-bb-admin.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'css/unity-a11y-bb-admin.css', [], $this->version, 'all' );
 
     }
 
@@ -96,8 +96,37 @@ class Unity_A11y_Bb_Admin {
          * class.
          */
 
-        wp_enqueue_script( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'js/unity-a11y-bb-admin.js', array( 'jquery' ), $this->version, false );
+        wp_enqueue_script( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'js/unity-a11y-bb-admin.js', ['jquery'], $this->version, false );
 
+    }
+
+    /**
+     * Check for required WordPress plugins.
+     *
+     * @since    1.0.0
+     */
+    public function check_required_plugins() {
+        add_action( 'admin_notices', function () {
+            $requires = [];
+
+            if ( !is_plugin_active('bb-plugin/fl-builder.php') ) {
+                $required[] = [
+                    'link' => 'https://www.wpbeaverbuilder.com/',
+                    'name' => 'Beaver Builder',
+                ];
+            }
+
+            if ( !empty($required) ) {
+                foreach ($required as $req) {
+                    ?>
+                    <div class="notice notice-error"><p>
+                        <?php printf( __('<b>%s Plugin</b>: <a href="%s" target="_blank" rel="noreferrer noopener">%s</a> must be installed and activated.', 'unity-a11y-bb'), __('Unity Accessible Modules', 'unity-a11y-bb'), $req['link'], $req['name'] ); ?>
+                    </p></div>
+                    <?php
+                }
+                deactivate_plugins( plugin_basename( __FILE__ ) );
+            }
+        } );
     }
 
 }

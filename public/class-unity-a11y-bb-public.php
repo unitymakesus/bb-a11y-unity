@@ -98,6 +98,20 @@ class Unity_A11y_Bb_Public {
 
 		wp_enqueue_script( $this->unity_a11y_bb, plugin_dir_url( __FILE__ ) . 'js/unity-a11y-bb-public.js', ['jquery'], $this->version, false );
 
-	}
+    }
+
+    /**
+     * Instantiate our Beaver Builder module classes.
+     *
+     * @since    1.0.0
+     */
+    public function load_accessible_modules() {
+        if ( class_exists( 'FLBuilder' ) ) {
+            require_once UNITY_A11Y_BB_DIR . 'modules/unity-accordion/unity-accordion.php';
+            require_once UNITY_A11Y_BB_DIR . 'modules/unity-jump-link/unity-jump-link.php';
+            require_once UNITY_A11Y_BB_DIR . 'modules/unity-modaal/unity-modaal.php';
+            require_once UNITY_A11Y_BB_DIR . 'modules/unity-modaal-gallery/unity-modaal-gallery.php';
+        }
+    }
 
 }

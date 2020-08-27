@@ -1,7 +1,6 @@
 <?php
 
 class UnityModaalModule extends FLBuilderModule {
-
     public function __construct() {
         parent::__construct([
             'name'        => __( 'Modaal', 'unity-a11y-bb' ),
@@ -11,8 +10,18 @@ class UnityModaalModule extends FLBuilderModule {
             'dir'         => UNITY_A11Y_BB_DIR . 'modules/unity-modaal/',
             'url'         => UNITY_A11Y_BB_URL . 'modules/unity-modaal/',
         ]);
-    }
 
+        /**
+         * CSS
+         */
+        $this->add_css('modaal-css', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css');
+
+        /**
+         * JS
+         */
+        $this->add_js('modaal-js', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js', ['jquery']);
+        $this->add_js('unity-modaal-js', asset_path('scripts/unity-modaal.js'), ['jquery', 'modaal-js'], null, true);
+    }
 }
 
 FLBuilder::register_module( 'UnityModaalModule', [

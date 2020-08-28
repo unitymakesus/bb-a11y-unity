@@ -6,6 +6,7 @@
  * Version:           1.0.0
  * Author:            Unity Web Agency
  * Author URI:        https://unitywebagency.com
+ * GitHub Plugin URI: unitymakesus/unity-a11y-bb
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       unity-a11y-bb

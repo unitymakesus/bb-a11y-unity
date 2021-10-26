@@ -24,6 +24,7 @@
     "sass-loader": "^12.1.0"
   },
   "dependencies": {
-    "modaal": "^0.4.4"
+    "modaal": "^0.4.4",
+    "plyr": "^3.6.9"
   }
 }

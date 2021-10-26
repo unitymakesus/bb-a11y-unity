@@ -50,8 +50,8 @@ add_action('admin_notices', function () {
  * @since    1.0.0
  */
 add_action('init', function() {
-    if (!class_exists('JsonManifest')) {
-        require_once UNITY_A11Y_BB_DIR . 'classes/class-json-manifest.php';
+    if (!class_exists('UnityJsonManifest')) {
+        require_once UNITY_A11Y_BB_DIR . 'classes/UnityJsonManifest.php';
     }
 
     if (class_exists('FLBuilder')) {

@@ -41,6 +41,7 @@ mix.js(`${src}/scripts/unity-audio.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-jump-link.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-modaal.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-modaal-gallery.js`, `${dist}/scripts`);
+mix.js(`${src}/scripts/unity-video.js`, `${dist}/scripts`);
 
 /**
  * Externally-loaded libraries.

@@ -24,6 +24,16 @@ class UnityAudioModule extends FLBuilderModule {
          */
         $this->add_js('unity-audio-js', asset_path('scripts/unity-audio.js'), [], null, true);
     }
+
+    /**
+     * Method to the icon for the module.
+     *
+     * @param string $icon
+     */
+    public function get_icon($icon = '')
+    {
+        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
+    }
 }
 
 FLBuilder::register_module('UnityAudioModule', [

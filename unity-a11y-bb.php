@@ -50,14 +50,19 @@ add_action('admin_notices', function () {
  * @since    1.0.0
  */
 add_action('init', function() {
-    if (!class_exists('JsonManifest')) {
-        require_once UNITY_A11Y_BB_DIR . 'classes/class-json-manifest.php';
+    if (!class_exists('UnityJsonManifest')) {
+        require_once UNITY_A11Y_BB_DIR . 'classes/UnityJsonManifest.php';
     }
 
     if (class_exists('FLBuilder')) {
+        require_once UNITY_A11Y_BB_DIR . 'modules/unity-audio/unity-audio.php';
+        require_once UNITY_A11Y_BB_DIR . 'modules/unity-blockquote/unity-blockquote.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-jump-link/unity-jump-link.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-modaal/unity-modaal.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-modaal-gallery/unity-modaal-gallery.php';
+        require_once UNITY_A11Y_BB_DIR . 'modules/unity-numbers/unity-numbers.php';
+        require_once UNITY_A11Y_BB_DIR . 'modules/unity-slider/unity-slider.php';
+        require_once UNITY_A11Y_BB_DIR . 'modules/unity-video/unity-video.php';
     }
 });
 

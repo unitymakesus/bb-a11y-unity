@@ -33,6 +33,31 @@ class UnityTabsModule extends FLBuilderModule {
     {
         return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
     }
+
+    /**
+     * Retrieve attributes for tab.
+     */
+    public function get_tab_attributes(int $index) : array
+    {
+        return [
+            'id'       => "{$this->node}-tab-{$index}",
+            'controls' => "{$this->node}-panel-{$index}",
+            'selected' => $i === 0 ? 'true' : 'false',
+            'tabindex' => $index > 0 ? 'tabindex=-1' : '',
+        ];
+    }
+
+    /**
+     * Retrieve attributes for tabpanel.
+     */
+    public function get_tabpanel_attributes(int $index) : array
+    {
+        return [
+            'id'         => "{$this->node}-panel-{$index}",
+            'labelledby' => "{$this->node}-tab-{$index}",
+            'hidden'     => $index > 0 ? 'hidden' : '',
+        ];
+    }
 }
 
 FLBuilder::register_module('UnityTabsModule', [

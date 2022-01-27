@@ -63,6 +63,7 @@ add_action('init', function() {
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-numbers/unity-numbers.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-posts/unity-posts.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-slider/unity-slider.php';
+        require_once UNITY_A11Y_BB_DIR . 'modules/unity-tabs/unity-tabs.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-video/unity-video.php';
     }
 });

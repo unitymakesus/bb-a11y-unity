@@ -1,0 +1,81 @@
+[hidden] {
+  display: none;
+}
+
+.unity-tabs {
+  display: grid;
+  gap: 1rem;
+  max-width: 1080px;
+  width: 100%;
+
+  [role="tablist"] {
+    display: flex;
+    margin: 0;
+    overflow: visible;
+  }
+
+  [role="tab"] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    transition: color 0.3s ease-in-out;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    appearance: none;
+    border: 0;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    /* stylelint-disable */
+    &:focus-visible {
+      outline-color: currentColor;
+      outline-offset: 0;
+    }
+    /* stylelint-enable */
+  }
+
+  [role="tabpanel"] {
+    position: relative;
+  }
+
+  &--vertical {
+    @media screen and (min-width: 768px) {
+      gap: 3rem;
+      grid-template-columns: 2fr 3fr;
+    }
+
+    [role="tablist"] {
+      flex-direction: column;
+    }
+
+    [role="tab"] {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &--horizontal {
+    [role="tablist"] {
+      flex-direction: row;
+    }
+
+    [role="tab"] {
+      margin-right: 1rem;
+    }
+  }
+}

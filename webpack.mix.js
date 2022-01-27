@@ -39,6 +39,9 @@ mix.sass(`${src}/styles/unity-posts.scss`, `${dist}/styles`, {
 mix.sass(`${src}/styles/unity-slider.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
+mix.sass(`${src}/styles/unity-tabs.scss`, `${dist}/styles`, {
+  implementation: require('node-sass'),
+});
 
 /**
  * JS.
@@ -49,6 +52,7 @@ mix.js(`${src}/scripts/unity-modaal.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-modaal-gallery.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-numbers.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-slider.js`, `${dist}/scripts`);
+mix.js(`${src}/scripts/unity-tabs.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-video.js`, `${dist}/scripts`);
 
 /**

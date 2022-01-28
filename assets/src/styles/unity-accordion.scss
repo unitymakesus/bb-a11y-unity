@@ -1,0 +1,51 @@
+.unity-accordion {
+  margin: 0;
+  padding: 0;
+
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  > * + * {
+    // border-top: 2px solid hsl(0, 0%, 82%);
+  }
+
+  &__trigger {
+    background: none;
+    color: hsl(0, 0%, 13%);
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 1rem;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background: hsl(216, 94%, 94%);
+    }
+  }
+
+  &__title {
+    display: block;
+    pointer-events: none;
+    border: transparent 2px solid;
+    border-radius: 5px;
+    padding: 0.25em;
+    outline: none;
+  }
+
+  &__panel {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+}

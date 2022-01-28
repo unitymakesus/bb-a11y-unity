@@ -24,6 +24,9 @@ mix.options({
 /**
  * CSS.
  */
+mix.sass(`${src}/styles/unity-accordion.scss`, `${dist}/styles`, {
+  implementation: require('node-sass'),
+});
 mix.sass(`${src}/styles/unity-audio.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
@@ -46,6 +49,7 @@ mix.sass(`${src}/styles/unity-tabs.scss`, `${dist}/styles`, {
 /**
  * JS.
  */
+mix.js(`${src}/scripts/unity-accordion.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-audio.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-jump-link.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-modaal.js`, `${dist}/scripts`);

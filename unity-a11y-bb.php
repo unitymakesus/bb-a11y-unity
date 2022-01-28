@@ -55,6 +55,7 @@ add_action('init', function() {
     }
 
     if (class_exists('FLBuilder')) {
+        require_once UNITY_A11Y_BB_DIR . 'modules/unity-accordion/unity-accordion.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-audio/unity-audio.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-blockquote/unity-blockquote.php';
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-jump-link/unity-jump-link.php';

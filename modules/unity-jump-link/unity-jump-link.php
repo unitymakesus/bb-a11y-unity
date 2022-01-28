@@ -1,7 +1,8 @@
 <?php
 
 class UnityJumpLinkModule extends FLBuilderModule {
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct([
             'name'        => __( 'Jump Link', 'unity-a11y-bb' ),
             'description' => __( 'A better jump link with accessible focus management.', 'unity-a11y-bb' ),
@@ -15,6 +16,17 @@ class UnityJumpLinkModule extends FLBuilderModule {
          * JS
          */
         $this->add_js('unity-a11y-bb-jump', asset_path('scripts/unity-jump-link.js'), ['jquery'], null, true);
+    }
+
+    /**
+     * Set a custom icon for the module.
+     *
+     * @param  mixed $icon
+     * @return string
+     */
+    public function get_icon($icon = '')
+    {
+        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
     }
 }
 

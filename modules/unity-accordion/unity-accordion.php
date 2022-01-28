@@ -25,9 +25,10 @@ class UnityAccordionModule extends FLBuilderModule {
     }
 
     /**
-     * Method to the icon for the module.
+     * Set a custom icon for the module.
      *
-     * @param string $icon
+     * @param  mixed $icon
+     * @return string
      */
     public function get_icon($icon = '')
     {
@@ -36,8 +37,11 @@ class UnityAccordionModule extends FLBuilderModule {
 
     /**
      * Retrieve attributes for accordion trigger.
+     *
+     * @param  int $index
+     * @return array
      */
-    public function get_trigger_attributes(int $index) : array
+    public function get_trigger_attributes($index)
     {
         return [
             'id'       => "{$this->node}-trigger-{$index}",
@@ -48,8 +52,11 @@ class UnityAccordionModule extends FLBuilderModule {
 
     /**
      * Retrieve attributes for accordion panel.
+     *
+     * @param  int $index
+     * @return array
      */
-    public function get_panel_attributes(int $index) : array
+    public function get_panel_attributes($index)
     {
         return [
             'id'         => "{$this->node}-panel-{$index}",

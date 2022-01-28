@@ -27,11 +27,21 @@ class UnitySliderModule extends FLBuilderModule {
     }
 
     /**
+     * Set a custom icon for the module.
      *
+     * @param  mixed $icon
+     * @return string
+     */
+    public function get_icon($icon = '')
+    {
+        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
+    }
+
+    /**
+     * Return all items for a slider.
      *
-     * @param array $settings
-     *
-     * @return array slides
+     * @param  array $settings
+     * @return array
      */
     public function get_slider_items($settings)
     {

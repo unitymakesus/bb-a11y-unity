@@ -49,7 +49,7 @@ add_action('admin_notices', function () {
  *
  * @since    1.0.0
  */
-add_action('init', function() {
+add_action('init', function () {
     if (!class_exists('UnityJsonManifest')) {
         require_once UNITY_A11Y_BB_DIR . 'classes/UnityJsonManifest.php';
     }
@@ -68,4 +68,3 @@ add_action('init', function() {
         require_once UNITY_A11Y_BB_DIR . 'modules/unity-video/unity-video.php';
     }
 });
-

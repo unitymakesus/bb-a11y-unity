@@ -25,9 +25,10 @@ class UnityTabsModule extends FLBuilderModule {
     }
 
     /**
-     * Method to the icon for the module.
+     * Set a custom icon for the module.
      *
-     * @param string $icon
+     * @param  mixed $icon
+     * @return string
      */
     public function get_icon($icon = '')
     {
@@ -36,8 +37,11 @@ class UnityTabsModule extends FLBuilderModule {
 
     /**
      * Retrieve attributes for tab.
+     *
+     * @param  int $index
+     * @return array
      */
-    public function get_tab_attributes(int $index) : array
+    public function get_tab_attributes($index)
     {
         return [
             'id'       => "{$this->node}-tab-{$index}",
@@ -49,8 +53,11 @@ class UnityTabsModule extends FLBuilderModule {
 
     /**
      * Retrieve attributes for tabpanel.
+     *
+     * @param  int $index
+     * @return array
      */
-    public function get_tabpanel_attributes(int $index) : array
+    public function get_tabpanel_attributes($index)
     {
         return [
             'id'         => "{$this->node}-panel-{$index}",

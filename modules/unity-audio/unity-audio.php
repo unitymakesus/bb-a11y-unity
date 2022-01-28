@@ -26,9 +26,10 @@ class UnityAudioModule extends FLBuilderModule {
     }
 
     /**
-     * Method to the icon for the module.
+     * Set a custom icon for the module.
      *
-     * @param string $icon
+     * @param  mixed $icon
+     * @return string
      */
     public function get_icon($icon = '')
     {

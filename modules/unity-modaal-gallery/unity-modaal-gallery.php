@@ -1,7 +1,8 @@
 <?php
 
 class UnityModaalGalleryModule extends FLBuilderModule {
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct([
             'name'        => __( 'Modaal Gallery', 'unity-a11y-bb' ),
             'description' => __( 'A button that opens an accessible Modaal dialog window with multiple images.', 'unity-a11y-bb' ),
@@ -22,6 +23,17 @@ class UnityModaalGalleryModule extends FLBuilderModule {
          */
         $this->add_js('modaal-js', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js', ['jquery']);
         $this->add_js('unity-modaal-gallery-js', asset_path('scripts/unity-modaal-gallery.js'), ['jquery', 'modaal-js'], null, true);
+    }
+
+    /**
+     * Set a custom icon for the module.
+     *
+     * @param  mixed $icon
+     * @return string
+     */
+    public function get_icon($icon = '')
+    {
+        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
     }
 }
 

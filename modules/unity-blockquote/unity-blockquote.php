@@ -11,6 +11,17 @@ class UnityBlockquoteModule extends FLBuilderModule {
             'url'         => UNITY_A11Y_BB_URL . 'modules/unity-blockquote/',
         ]);
     }
+
+    /**
+     * Set a custom icon for the module.
+     *
+     * @param  mixed $icon
+     * @return string
+     */
+    public function get_icon($icon = '')
+    {
+        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
+    }
 }
 
 FLBuilder::register_module('UnityBlockquoteModule', [

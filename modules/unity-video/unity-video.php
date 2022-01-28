@@ -24,6 +24,17 @@ class UnityVideoModule extends FLBuilderModule {
          */
         $this->add_js('unity-video-js', asset_path('scripts/unity-video.js'), [], null, true);
     }
+
+    /**
+     * Set a custom icon for the module.
+     *
+     * @param  mixed $icon
+     * @return string
+     */
+    public function get_icon($icon = '')
+    {
+        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
+    }
 }
 
 FLBuilder::register_module('UnityVideoModule', [

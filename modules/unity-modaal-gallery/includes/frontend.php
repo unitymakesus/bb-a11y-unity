@@ -14,7 +14,7 @@ $i = 1;
                     href="<?php echo wp_get_attachment_image_src($image, 'large')[0]; ?>"
                     data-group="modaal-gallery-<?php echo esc_attr($namespace); ?>" data-modaal-desc="<?php echo esc_attr(get_post_meta($image, '_wp_attachment_image_alt', true)); ?>"
                 >
-                    <?php echo wp_get_attachment_image($image, 'medium'); ?>
+                    <?php echo wp_get_attachment_image($image, 'medium', '', ['class' => 'unity-modaal-gallery-item__image']); ?>
                 </a>
 
                 <?php

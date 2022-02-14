@@ -30,10 +30,19 @@ mix.sass(`${src}/styles/unity-accordion.scss`, `${dist}/styles`, {
 mix.sass(`${src}/styles/unity-audio.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
+mix.sass(`${src}/styles/unity-blockquote.scss`, `${dist}/styles`, {
+  implementation: require('node-sass'),
+});
+mix.sass(`${src}/styles/unity-jump-link.scss`, `${dist}/styles`, {
+  implementation: require('node-sass'),
+});
 mix.sass(`${src}/styles/unity-modaal.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
 mix.sass(`${src}/styles/unity-modaal-gallery.scss`, `${dist}/styles`, {
+  implementation: require('node-sass'),
+});
+mix.sass(`${src}/styles/unity-numbers.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
 mix.sass(`${src}/styles/unity-posts.scss`, `${dist}/styles`, {

@@ -53,6 +53,36 @@ FLBuilder::register_module('UnityNumbersModule', [
             ],
         ],
     ],
+    'unity-numbers-style' => [
+        'title' => __('Style', ''),
+        'sections' => [
+            'style' => [
+                'title'  => '',
+                'fields' => [
+                    'align' => [
+                        'type'       => 'align',
+                        'label'      => __('Align', ''),
+                        'default'    => 'left',
+                        'preview'    => [
+                            'type' => 'css',
+                            'selector' => '.unity-numbers',
+                            'property' => 'text-align',
+                        ],
+                    ],
+                    'font_size' => [
+                        'type'        => 'unit',
+                        'label'       => __('Font Size', ''),
+                        'units'       => ['px', 'vw', 'em', 'rem'],
+                        'preview'    => [
+                            'type' => 'css',
+                            'selector' => '.unity-numbers__count',
+                            'property' => 'font-size',
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
 ]);
 
 /**
@@ -73,6 +103,26 @@ FLBuilder::register_settings_form('unity_numbers_form', [
                             'size'        => '1',
                             'default'     => '100',
                             'placeholder' => '100',
+                            'connections' => ['custom_field'],
+                        ],
+                        'text' => [
+                            'type' => 'text',
+                            'label' => __( 'Text', '' ),
+                        ],
+                        'prefix' => [
+                            'type' => 'text',
+                            'label' => __( 'Prefix', '' ),
+                        ],
+                        'suffix' => [
+                            'type' => 'text',
+                            'label' => __( 'Suffix', '' ),
+                        ],
+                        'decimal_places' => [
+                            'type'        => 'unit',
+                            'label'       => __( 'Decimal Places', '' ),
+                            'size'        => '1',
+                            'default'     => '0',
+                            'placeholder' => '1',
                             'connections' => ['custom_field'],
                         ],
                         'aria_label' => [

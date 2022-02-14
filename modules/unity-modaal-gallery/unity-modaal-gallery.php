@@ -37,16 +37,37 @@ class UnityModaalGalleryModule extends FLBuilderModule {
     }
 }
 
-FLBuilder::register_module( 'UnityModaalGalleryModule', [
+FLBuilder::register_module('UnityModaalGalleryModule', [
     'unity-modaal-gallery-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __('General', ''),
         'sections' => [
             'content' => [
-                'title'  => __( 'Content', 'unity-a11y-bb' ),
+                'title'  => '',
                 'fields' => [
                     'images' => [
-                        'type'          => 'multiple-photos',
-                        'label'         => __( 'Gallery', 'unity-a11y-bb' ),
+                        'type'  => 'multiple-photos',
+                        'label' => __('Gallery', ''),
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'unity-modaal-gallery-style' => [
+        'title'    => __('Style', ''),
+        'sections' => [
+            'style' => [
+                'title'  => '',
+                'fields' => [
+                    'layout_grid' => [
+                        'type'        => 'unit',
+                        'label'       => __('Layout Grid', ''),
+                        'responsive'  => [
+                            'placeholder' => [
+                                'default'    =>  3,
+                                'medium'     =>  2,
+                                'responsive' =>  1,
+                            ],
+                        ],
                     ],
                 ],
             ],

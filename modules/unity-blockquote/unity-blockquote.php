@@ -10,6 +10,11 @@ class UnityBlockquoteModule extends FLBuilderModule {
             'dir'         => UNITY_A11Y_BB_DIR . 'modules/unity-blockquote/',
             'url'         => UNITY_A11Y_BB_URL . 'modules/unity-blockquote/',
         ]);
+
+        /**
+         * CSS
+         */
+        $this->add_css('unity-blockquote-css', asset_path('styles/unity-blockquote.css'));
     }
 
     /**

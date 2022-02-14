@@ -1,71 +1,57 @@
-// @source https://jshakespeare.com/simple-count-up-number-animation-javascript-react/
+import { CountUp } from 'countup.js';
 
 /**
+ * Initialize CountUp on group of elements.
  *
- * @param {*} el
+ * @param IntersectionObserverEntry wrapper
  */
-function animateCountUp(el) {
-  // How long you want the animation to take, in ms
-  const animationDuration = 1000;
-  // Calculate how long each ‘frame’ should last if we want to update the animation 60 times per second
-  const frameDuration = 1000 / 60;
-  // Use that to calculate how many frames we need to complete the animation
-  const totalFrames = Math.round(animationDuration / frameDuration);
-  // An ease-out function that slows the count as it progresses
-  const easeOutQuad = t => t * (2 - t);
+const initCountUp = (wrapperElem) => {
+  const numberElems = wrapperElem.target.querySelectorAll('.unity-numbers__count');
 
-	let frame = 0;
-	const countTo = parseInt(el.innerHTML, 10);
-	// Start the animation running 60 times per second
-	const counter = setInterval(() => {
-		frame++;
-		// Calculate our progress as a value between 0 and 1
-		// Pass that value to our easing function to get our
-		// progress on a curve
-		const progress = easeOutQuad(frame / totalFrames);
-		// Use the progress value to calculate the current count
-		const currentCount = Math.round(countTo * progress);
+  numberElems.forEach(el => {
+    const { number, numberSuffix, numberPrefix, numberSeparator, numberDecimalPlaces } = el.dataset;
+    const countUpOptions = {
+      decimalPlaces: parseInt(numberDecimalPlaces),
+      duration: 1.5,
+      suffix: numberSuffix || '',
+      prefix: numberPrefix || '',
+      separator: numberSeparator,
+      useGrouping: true,
+    };
 
-		// If the current count has changed, update the element
-		if (parseInt(el.innerHTML, 10) !== currentCount) {
-			el.innerHTML = currentCount;
-		}
-
-		// If we’ve reached our last frame, stop the animation
-		if (frame === totalFrames) {
-			clearInterval(counter);
-		}
-	}, frameDuration);
-};
-
-/**
- *
- * @param {*} entry
- */
-function initNumbersCount(entry) {
-  const numbers = entry.querySelectorAll('.unity-numbers__count');
-  numbers.forEach((number) => {
-    animateCountUp(number);
+    const countUp = new CountUp(el, number, countUpOptions);
+    countUp.start();
   });
 }
 
-/**
- * Init.
- */
- window.onload = () => {
-  const numbersObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        initNumbersCount(entry.target);
-        numbersObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    rootMargin: '-50% 0px',
+const numbersWrapper = document.querySelectorAll('.unity-numbers');
+const numbersObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      initCountUp(entry);
+      numbersObserver.unobserve(entry.target);
+    }
   });
+}, {
+  threshold: 0.25
+});
 
-  const numbersWrapper = document.querySelectorAll('.unity-numbers');
+const flBuilderLayout = document.querySelector('.fl-builder-content');
+
+document.addEventListener('DOMContentLoaded', () => {
   numbersWrapper.forEach(wrapper => {
     numbersObserver.observe(wrapper);
   });
-}
+});
+
+flBuilderLayout.addEventListener('fl-builder.preview-rendered', () => {
+  numbersWrapper.forEach(wrapper => {
+    numbersObserver.observe(wrapper);
+  });
+});
+
+flBuilderLayout.addEventListener('fl-builder.layout-rendered', () => {
+  numbersWrapper.forEach(wrapper => {
+    numbersObserver.observe(wrapper);
+  });
+});

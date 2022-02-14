@@ -16,6 +16,8 @@ class UnityModaalModule extends FLBuilderModule {
          * CSS
          */
         $this->add_css('modaal-css', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css');
+        $this->add_css('unity-modaal-css', asset_path('styles/unity-modaal.css'));
+
 
         /**
          * JS
@@ -68,15 +70,21 @@ FLBuilder::register_module( 'UnityModaalModule', [
         ],
     ],
     'unity-modaal-style' => [
-        'title'    => __( 'Style', 'unity-a11y-bb' ),
+        'title'    => __('Style', ''),
         'sections' => [
             'style'  => [
                 'title'  => '',
                 'fields' => [
-                    'align'        => [
+                    'button_align' => [
                         'type'    => 'align',
-                        'label'   => __( 'Align', 'unity-a11y-bb' ),
+                        'label'   => __('Button Align', ''),
                         'default' => 'left',
+                    ],
+                    'button_background_color' => [
+                        'type'       => 'color',
+                        'label'      => __('Button Background Color', ''),
+                        'help'       => __('By selecting the background color, the text color will automatically update in order to meet WCAG 2.1 Level AA guidelines for color contrast ratios.', ''),
+                        'show_reset' => true,
                     ],
                 ],
             ],

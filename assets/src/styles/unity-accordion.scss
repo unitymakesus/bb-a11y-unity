@@ -12,12 +12,15 @@
   }
 
   &__trigger {
+    border: 1px solid currentColor;
+    appearance: none;
+    -webkit-appearance: none;
     background: none;
     color: hsl(0, 0%, 13%);
     display: block;
     font-size: 1rem;
     font-weight: normal;
-    margin: 0;
+    margin: 0 0 1rem 0;
     padding: 1rem;
     position: relative;
     text-align: left;

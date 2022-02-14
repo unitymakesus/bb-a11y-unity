@@ -55,6 +55,16 @@ FLBuilder::register_module('UnityJumpLinkModule', [
             'style'  => [
                 'title'  => '',
                 'fields' => [
+                    'width' => [
+                        'type'    => 'select',
+                        'label'   => __('Width', ''),
+                        'default' => 'auto',
+                        'options' => [
+                            'auto'   => __( 'Auto'),
+                            'full'   => __('Full Width'),
+                            'custom' => __('Custom'),
+                        ],
+                    ],
                     'align'        => [
                         'type'       => 'align',
                         'label'      => __( 'Align', 'unity-a11y-bb' ),

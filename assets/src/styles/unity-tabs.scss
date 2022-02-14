@@ -15,13 +15,15 @@
   }
 
   [role="tab"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid currentColor;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     background-color: transparent;
     transition: color 0.3s ease-in-out;
-    padding-top: 0.125rem;
-    padding-bottom: 0.125rem;
+    padding: 1rem;
     font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -29,8 +31,6 @@
     font-family: inherit;
     font-size: inherit;
     font-weight: 700;
-    appearance: none;
-    border: 0;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {

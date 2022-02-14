@@ -1,11 +1,11 @@
 <?php if ($items = $module->get_slider_items($settings)) : ?>
     <?php
-        $test = $settings->slider_responsive_responsive;
-        $test_2 = $settings->slider_responsive_medium;
-        $test_3 = $settings->slider_responsive;
-        var_dump($test);
-        var_dump($test_2);
-        var_dump($test_3);
+        // $test = $settings->slider_responsive_responsive;
+        // $test_2 = $settings->slider_responsive_medium;
+        // $test_3 = $settings->slider_responsive;
+        // var_dump($test);
+        // var_dump($test_2);
+        // var_dump($test_3);
     ?>
     <div class="unity-slider" data-slide-count-lg="" data-slide-count-md="" data-slide-count-sm="">
         <?php foreach ($items as $item) : ?>

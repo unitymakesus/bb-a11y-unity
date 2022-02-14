@@ -57,4 +57,21 @@ FLBuilder::register_module('UnityAudioModule', [
             ],
         ],
     ],
+    // 'unity-audio-style' => [
+    //     'title'    => __( 'Style', 'unity-a11y-bb' ),
+    //     'sections' => [
+    //         'style' => [
+    //             'title'  => '',
+    //             'fields' => [
+    //                 'theme_main_color' => [
+    //                     'type'        => 'color',
+    //                     'label'       => __('Main Color', ''),
+    //                     'help'        => __('This controls the player’s main UI color. An accessible color ratio will generate to meet WCAG 2.1 AA standards.', ''),
+    //                     'default'     => '',
+    //                     'show_reset'  => true,
+    //                 ],
+    //             ],
+    //         ],
+    //     ],
+    // ],
 ]);

@@ -5,7 +5,7 @@
  *
  * @source https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
  */
- function initTabs(tablist) {
+function initTabs(tablist) {
   var tabs = tablist.querySelectorAll('[role="tab"]');
   var panels = tablist.querySelectorAll('[role="tabpanel"]');
   var delay = 0;

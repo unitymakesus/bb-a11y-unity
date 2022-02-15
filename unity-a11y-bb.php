@@ -50,6 +50,8 @@ add_action('admin_notices', function () {
  * @since    1.0.0
  */
 add_action('init', function () {
+    require __DIR__ . '/vendor/autoload.php';
+
     if (!class_exists('UnityJsonManifest')) {
         require_once UNITY_A11Y_BB_DIR . 'classes/UnityJsonManifest.php';
     }

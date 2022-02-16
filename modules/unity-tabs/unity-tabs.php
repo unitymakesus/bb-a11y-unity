@@ -46,7 +46,7 @@ class UnityTabsModule extends FLBuilderModule {
         return [
             'id'       => "{$this->node}-tab-{$index}",
             'controls' => "{$this->node}-panel-{$index}",
-            'selected' => $i === 0 ? 'true' : 'false',
+            'selected' => $index === 0 ? 'true' : 'false',
             'tabindex' => $index > 0 ? 'tabindex=-1' : '',
         ];
     }

@@ -46,7 +46,7 @@ class UnityAccordionModule extends FLBuilderModule {
         return [
             'id'       => "{$this->node}-trigger-{$index}",
             'controls' => "{$this->node}-panel-{$index}",
-            'expanded' => $i === 0 ? 'true' : 'false',
+            'expanded' => $index === 0 ? 'true' : 'false',
         ];
     }
 

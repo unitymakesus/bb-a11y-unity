@@ -6,7 +6,7 @@ class UnitySliderModule extends FLBuilderModule {
         parent::__construct([
             'name'            => __( 'Slider', 'unity-a11y-bb' ),
             'description'     => __( '', 'unity-a11y-bb' ),
-            'icon'            => 'unity.svg',
+            'icon'            => 'slides.svg',
             'category'        => __( 'Unity', 'unity-a11y-bb' ),
             'partial_refresh' => true,
             'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-slider/',
@@ -27,23 +27,12 @@ class UnitySliderModule extends FLBuilderModule {
     }
 
     /**
-     * Set a custom icon for the module.
-     *
-     * @param  mixed $icon
-     * @return string
-     */
-    public function get_icon($icon = '')
-    {
-        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
-    }
-
-    /**
      * Return all items for a slider.
      *
      * @param  array $settings
      * @return array
      */
-    public function get_slider_items($settings)
+    public function getSliderItems($settings)
     {
         return $settings->add_slider_item;
     }
@@ -51,14 +40,14 @@ class UnitySliderModule extends FLBuilderModule {
 
 FLBuilder::register_module('UnitySliderModule', [
     'unity-slider-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __('General', 'unity-a11y-bb'),
         'sections' => [
             'general' => [
                 'title'  => '',
                 'fields' => [
                     'add_slider_item' => [
                         'type'         => 'form',
-                        'label'        => __( 'Slider Item', '' ),
+                        'label'        => __('Slider Item', ''),
                         'form'         => 'slider_item_form',
                         'preview_text' => 'slider_item_title',
                         'multiple'     => true,
@@ -70,7 +59,7 @@ FLBuilder::register_module('UnitySliderModule', [
                 'fields' => [
                     'slider_responsive' => [
                         'type'        => 'unit',
-                        'label'       => __( 'Responsive Settings', '' ),
+                        'label'       => __('Responsive Settings', ''),
                         'description' => '',
                         'responsive'  => [
                             'placeholder' => [
@@ -80,6 +69,11 @@ FLBuilder::register_module('UnitySliderModule', [
                             ],
                         ],
                     ],
+                    'slider_item_images_size' => [
+                        'type'    => 'photo-sizes',
+                        'label'   => __('Images Size', ''),
+                        'default' => 'medium',
+                    ],
                 ],
             ]
         ],
@@ -87,33 +81,22 @@ FLBuilder::register_module('UnitySliderModule', [
 ]);
 
 FLBuilder::register_settings_form('slider_item_form', [
-    'title' => __( 'Add Slider Item', '' ),
+    'title' => __('Add Slider Item', ''),
     'tabs' => [
         'slider_item_general' => [
-            'title' => __( 'General', '' ),
+            'title' => __('General', ''),
             'sections' => [
                 'content' => [
-                    'title' => __( 'Item', '' ),
+                    'title' => __('Item', ''),
                     'fields' => [
-                        'slider_item_title' => [
-                            'type' => 'text',
-                            'label' => __( 'Title', '' ),
-                        ],
                         'slider_item_image' => [
-                            'type' => 'photo',
-                            'label' => __( 'Background Image', '' ),
+                            'type'        => 'photo',
+                            'label'       => __('Image', ''),
+                            'help'        => __('Be sure to add alt text to your image!', ''),
+                            'show_remove' => false,
                         ],
                     ],
                 ],
-                // 'link' => [
-                //     'title' => __( 'Link', '' ),
-                //     'fields' => [
-                //         'slider_item_link' => [
-                //             'type' => 'link',
-                //             'label' => __( 'Link', '' ),
-                //         ],
-                //     ],
-                // ],
             ],
         ],
     ],

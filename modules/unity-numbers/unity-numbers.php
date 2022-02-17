@@ -5,7 +5,7 @@ class UnityNumbersModule extends FLBuilderModule {
         parent::__construct([
             'name'            => __( 'Numbers', '' ),
             'description'     => __( '' ),
-            'icon'            => 'button.svg',
+            'icon'            => 'chart-bar.svg',
             'category'        => __( 'Unity', '' ),
             'partial-refresh' => true,
             'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-numbers/',
@@ -21,17 +21,6 @@ class UnityNumbersModule extends FLBuilderModule {
          * JS
          */
         $this->add_js('unity-numbers-js', asset_path('scripts/unity-numbers.js'), [], '', true);
-    }
-
-    /**
-     * Set a custom icon for the module.
-     *
-     * @param  mixed $icon
-     * @return string
-     */
-    public function get_icon($icon = '')
-    {
-        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
     }
 }
 
@@ -60,22 +49,23 @@ FLBuilder::register_module('UnityNumbersModule', [
                 'title'  => '',
                 'fields' => [
                     'align' => [
-                        'type'       => 'align',
-                        'label'      => __('Align', ''),
-                        'default'    => 'left',
-                        'preview'    => [
-                            'type' => 'css',
+                        'type'    => 'align',
+                        'label'   => __('Align', ''),
+                        'default' => 'left',
+                        'preview' => [
+                            'type'     => 'css',
                             'selector' => '.unity-numbers',
                             'property' => 'text-align',
                         ],
                     ],
-                    'font_size' => [
-                        'type'        => 'unit',
-                        'label'       => __('Font Size', ''),
-                        'units'       => ['px', 'vw', 'em', 'rem'],
-                        'preview'    => [
-                            'type' => 'css',
-                            'selector' => '.unity-numbers__count',
+                    'number_font_size' => [
+                        'type'    => 'unit',
+                        'label'   => __('Font Size', ''),
+                        'units'   => ['px', 'vw', 'em', 'rem'],
+                        'default' => 'px',
+                        'preview' => [
+                            'type'     => 'css',
+                            'selector' => 'span.unity-numbers__count',
                             'property' => 'font-size',
                         ],
                     ],

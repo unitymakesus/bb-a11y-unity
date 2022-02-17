@@ -1,14 +1,16 @@
 <?php
 
+use Spatie\Color\Hex;
+
 class UnityAccordionModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
             'name'            => __( 'Accordion', 'unity-a11y-bb' ),
             'description'     => __( 'An accessible accordion pattern.', 'unity-a11y-bb' ),
-            'icon'            => 'button.svg',
+            'icon'            => 'layout.svg',
             'category'        => __( 'Unity', 'unity-a11y-bb' ),
-            'partial_refresh' => true,
+            'partial_refresh' => false,
             'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-accordion/',
             'url'             => UNITY_A11Y_BB_URL . 'modules/unity-accordion/',
         ]);
@@ -22,17 +24,6 @@ class UnityAccordionModule extends FLBuilderModule {
          * JS
          */
         $this->add_js('unity-accordion-js', asset_path('scripts/unity-accordion.js'), [], null, true);
-    }
-
-    /**
-     * Set a custom icon for the module.
-     *
-     * @param  mixed $icon
-     * @return string
-     */
-    public function get_icon($icon = '')
-    {
-        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
     }
 
     /**
@@ -64,6 +55,17 @@ class UnityAccordionModule extends FLBuilderModule {
             'hidden'     => $index > 0 ? 'hidden' : '',
         ];
     }
+
+    /**
+     * Process a Hex color value into an RGB object for the accessible color calc() function in the module's CSS.
+     *
+     * @param string $str
+     * @return Spatie\Color\Hex
+     */
+    public function processHexToRgb($str)
+    {
+        return Hex::fromString('#' . $str)->toRgb();
+    }
 }
 
 FLBuilder::register_module('UnityAccordionModule', [
@@ -79,6 +81,23 @@ FLBuilder::register_module('UnityAccordionModule', [
                         'form'         => 'accordion_form',
                         'preview_text' => 'title',
                         'multiple'     => true,
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'unity-accordion-style' => [
+        'title'    => __('Style', ''),
+        'sections' => [
+            'style' => [
+                'title'  => '',
+                'fields' => [
+                    'accent_color' => [
+                        'type'       => 'color',
+                        'label'      => __('Accent Color', ''),
+                        'help'       => __('By selecting the accent color, any text color will automatically update in order to meet WCAG 2.1 Level AA guidelines for color contrast ratios.', ''),
+                        'show_reset' => true,
+                        'show_alpha' => false,
                     ],
                 ],
             ],

@@ -1,14 +1,19 @@
 <?php
 
+/**
+ * Align
+ */
 FLBuilderCSS::responsive_rule([
     'settings'     => $settings,
     'setting_name' => 'align',
-    'selector'     => '.unity-numbers',
+    'selector'     => ".fl-builder-content .fl-node-$id .unity-numbers",
     'prop'         => 'text-align',
 ]);
 
 ?>
 
-.unity-numbers__count {
-    font-size: <?php echo $settings->font_size . $settings-> font_size_unit; ?>;
-}
+<?php if (!empty($settings->number_font_size)) : ?>
+    .fl-node-<?php echo $id; ?> span.unity-numbers__count {
+        font-size: <?php echo $settings->number_font_size . $settings->number_font_size_unit; ?>;
+    }
+<?php endif; ?>

@@ -54,6 +54,9 @@ mix.sass(`${src}/styles/unity-slider.scss`, `${dist}/styles`, {
 mix.sass(`${src}/styles/unity-tabs.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
+mix.sass(`${src}/styles/unity-video.scss`, `${dist}/styles`, {
+  implementation: require('node-sass'),
+});
 
 /**
  * JS.

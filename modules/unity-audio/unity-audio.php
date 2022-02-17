@@ -6,9 +6,9 @@ class UnityAudioModule extends FLBuilderModule {
         parent::__construct([
             'name'            => __( 'Audio', 'unity-a11y-bb' ),
             'description'     => __( 'An accessible audio player powered by Plyr.', 'unity-a11y-bb' ),
-            'icon'            => 'button.svg',
+            'icon'            => 'format-audio.svg',
             'category'        => __( 'Unity', 'unity-a11y-bb' ),
-            'partial_refresh' => true,
+            'partial_refresh' => false,
             'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-audio/',
             'url'             => UNITY_A11Y_BB_URL . 'modules/unity-audio/',
         ]);
@@ -23,17 +23,6 @@ class UnityAudioModule extends FLBuilderModule {
          * JS
          */
         $this->add_js('unity-audio-js', asset_path('scripts/unity-audio.js'), [], null, true);
-    }
-
-    /**
-     * Set a custom icon for the module.
-     *
-     * @param  mixed $icon
-     * @return string
-     */
-    public function get_icon($icon = '')
-    {
-        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
     }
 }
 
@@ -57,21 +46,4 @@ FLBuilder::register_module('UnityAudioModule', [
             ],
         ],
     ],
-    // 'unity-audio-style' => [
-    //     'title'    => __( 'Style', 'unity-a11y-bb' ),
-    //     'sections' => [
-    //         'style' => [
-    //             'title'  => '',
-    //             'fields' => [
-    //                 'theme_main_color' => [
-    //                     'type'        => 'color',
-    //                     'label'       => __('Main Color', ''),
-    //                     'help'        => __('This controls the player’s main UI color. An accessible color ratio will generate to meet WCAG 2.1 AA standards.', ''),
-    //                     'default'     => '',
-    //                     'show_reset'  => true,
-    //                 ],
-    //             ],
-    //         ],
-    //     ],
-    // ],
 ]);

@@ -13,20 +13,14 @@ class UnityJumpLinkModule extends FLBuilderModule {
         ]);
 
         /**
+         * CSS
+         */
+        $this->add_css('unity-jump-link-css', asset_path('styles/unity-jump-link.css'));
+
+        /**
          * JS
          */
-        $this->add_js('unity-a11y-bb-jump', asset_path('scripts/unity-jump-link.js'), ['jquery'], null, true);
-    }
-
-    /**
-     * Set a custom icon for the module.
-     *
-     * @param  mixed $icon
-     * @return string
-     */
-    public function get_icon($icon = '')
-    {
-        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
+        $this->add_js('unity-jump-link-js', asset_path('scripts/unity-jump-link.js'), ['jquery'], null, true);
     }
 }
 

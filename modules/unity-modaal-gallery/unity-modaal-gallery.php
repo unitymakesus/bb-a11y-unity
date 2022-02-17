@@ -6,7 +6,7 @@ class UnityModaalGalleryModule extends FLBuilderModule {
         parent::__construct([
             'name'        => __( 'Modaal Gallery', 'unity-a11y-bb' ),
             'description' => __( 'A button that opens an accessible Modaal dialog window with multiple images.', 'unity-a11y-bb' ),
-            'icon'        => 'button.svg',
+            'icon'        => 'format-gallery.svg',
             'category'    => __( 'Unity', 'unity-a11y-bb' ),
             'dir'         => UNITY_A11Y_BB_DIR . 'modules/unity-modaal-gallery/',
             'url'         => UNITY_A11Y_BB_URL . 'modules/unity-modaal-gallery/',
@@ -24,17 +24,6 @@ class UnityModaalGalleryModule extends FLBuilderModule {
         $this->add_js('modaal-js', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js', ['jquery']);
         $this->add_js('unity-modaal-gallery-js', asset_path('scripts/unity-modaal-gallery.js'), ['jquery', 'modaal-js'], null, true);
     }
-
-    /**
-     * Set a custom icon for the module.
-     *
-     * @param  mixed $icon
-     * @return string
-     */
-    public function get_icon($icon = '')
-    {
-        return fl_builder_filesystem()->file_get_contents(UNITY_A11Y_BB_DIR . 'assets/src/icons/unity.svg');
-    }
 }
 
 FLBuilder::register_module('UnityModaalGalleryModule', [
@@ -46,6 +35,7 @@ FLBuilder::register_module('UnityModaalGalleryModule', [
                 'fields' => [
                     'images' => [
                         'type'  => 'multiple-photos',
+                        'help'  => __('Be sure to add alt text to your images!', ''),
                         'label' => __('Gallery', ''),
                     ],
                 ],

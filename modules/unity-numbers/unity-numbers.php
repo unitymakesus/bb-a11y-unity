@@ -8,8 +8,8 @@ class UnityNumbersModule extends FLBuilderModule {
             'icon'            => 'chart-bar.svg',
             'category'        => __( 'Unity', '' ),
             'partial-refresh' => true,
-            'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-numbers/',
-            'url'             => UNITY_A11Y_BB_DIR . 'modules/unity-numbers/',
+            'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-numbers/',
+            'url'             => BB_A11Y_UNITY_DIR . 'modules/unity-numbers/',
         ]);
 
         /**

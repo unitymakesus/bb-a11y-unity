@@ -4,13 +4,13 @@ class UnityPostsModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'            => __( 'Posts', 'unity-a11y-bb' ),
-            'description'     => __( 'A feed of posts.', 'unity-a11y-bb' ),
+            'name'            => __( 'Posts', 'bb-a11y-unity' ),
+            'description'     => __( 'A feed of posts.', 'bb-a11y-unity' ),
             'icon'            => 'schedule.svg',
-            'category'        => __( 'Unity', 'unity-a11y-bb' ),
+            'category'        => __( 'Unity', 'bb-a11y-unity' ),
             'partial_refresh' => true,
-            'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-posts/',
-            'url'             => UNITY_A11Y_BB_URL . 'modules/unity-posts/',
+            'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-posts/',
+            'url'             => BB_A11Y_UNITY_URL . 'modules/unity-posts/',
         ]);
 
         /**
@@ -22,7 +22,7 @@ class UnityPostsModule extends FLBuilderModule {
 
 FLBuilder::register_module('UnityPostsModule', [
     'unity-posts-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __( 'General', 'bb-a11y-unity' ),
         'sections' => [
             'general' => [
                 'title'  => __('Options', ''),

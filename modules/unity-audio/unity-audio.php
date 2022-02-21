@@ -4,13 +4,13 @@ class UnityAudioModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'            => __( 'Audio', 'unity-a11y-bb' ),
-            'description'     => __( 'An accessible audio player powered by Plyr.', 'unity-a11y-bb' ),
+            'name'            => __( 'Audio', 'bb-a11y-unity' ),
+            'description'     => __( 'An accessible audio player powered by Plyr.', 'bb-a11y-unity' ),
             'icon'            => 'format-audio.svg',
-            'category'        => __( 'Unity', 'unity-a11y-bb' ),
+            'category'        => __( 'Unity', 'bb-a11y-unity' ),
             'partial_refresh' => false,
-            'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-audio/',
-            'url'             => UNITY_A11Y_BB_URL . 'modules/unity-audio/',
+            'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-audio/',
+            'url'             => BB_A11Y_UNITY_URL . 'modules/unity-audio/',
         ]);
 
         /**
@@ -28,19 +28,19 @@ class UnityAudioModule extends FLBuilderModule {
 
 FLBuilder::register_module('UnityAudioModule', [
     'unity-audio-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __( 'General', 'bb-a11y-unity' ),
         'sections' => [
             'general' => [
                 'title'  => '',
                 'fields' => [
                     'audio_mp3' => [
                         'type'        => 'text',
-                        'label'       => __( 'MP3 URL', 'unity-a11y-bb' ),
+                        'label'       => __( 'MP3 URL', 'bb-a11y-unity' ),
                         'connections' => ['url'],
                     ],
                     'transcript_text' => [
                         'type' => 'editor',
-                        'label' => __( 'Transcript Text', 'unity-a11y-bb' ),
+                        'label' => __( 'Transcript Text', 'bb-a11y-unity' ),
                     ],
                 ],
             ],

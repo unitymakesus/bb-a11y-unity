@@ -4,13 +4,13 @@ class UnitySliderModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'            => __( 'Slider', 'unity-a11y-bb' ),
-            'description'     => __( '', 'unity-a11y-bb' ),
+            'name'            => __( 'Slider', 'bb-a11y-unity' ),
+            'description'     => __( '', 'bb-a11y-unity' ),
             'icon'            => 'slides.svg',
-            'category'        => __( 'Unity', 'unity-a11y-bb' ),
+            'category'        => __( 'Unity', 'bb-a11y-unity' ),
             'partial_refresh' => true,
-            'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-slider/',
-            'url'             => UNITY_A11Y_BB_URL . 'modules/unity-slider/',
+            'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-slider/',
+            'url'             => BB_A11Y_UNITY_URL . 'modules/unity-slider/',
         ]);
 
         /**
@@ -40,7 +40,7 @@ class UnitySliderModule extends FLBuilderModule {
 
 FLBuilder::register_module('UnitySliderModule', [
     'unity-slider-general' => [
-        'title'    => __('General', 'unity-a11y-bb'),
+        'title'    => __('General', 'bb-a11y-unity'),
         'sections' => [
             'general' => [
                 'title'  => '',

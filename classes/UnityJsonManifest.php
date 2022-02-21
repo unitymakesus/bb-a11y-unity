@@ -48,10 +48,10 @@ function asset_path($filename) {
     static $manifest;
 
     $filename = "/{$filename}";
-    $dist_path = UNITY_A11Y_BB_URL . 'assets/dist';
+    $dist_path = BB_A11Y_UNITY_URL . 'assets/dist';
 
     if (empty($manifest)) {
-        $manifest_path = UNITY_A11Y_BB_DIR . 'assets/dist/mix-manifest.json';
+        $manifest_path = BB_A11Y_UNITY_DIR . 'assets/dist/mix-manifest.json';
         $manifest = new UnityJsonManifest($manifest_path);
     }
 

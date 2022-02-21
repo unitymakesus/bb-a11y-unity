@@ -6,12 +6,12 @@ class UnityModaalModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'        => __( 'Modaal', 'unity-a11y-bb' ),
-            'description' => __( 'A button that opens an accessible Modaal dialog window.', 'unity-a11y-bb' ),
+            'name'        => __( 'Modaal', 'bb-a11y-unity' ),
+            'description' => __( 'A button that opens an accessible Modaal dialog window.', 'bb-a11y-unity' ),
             'icon'        => 'button.svg',
-            'category'    => __( 'Unity', 'unity-a11y-bb' ),
-            'dir'         => UNITY_A11Y_BB_DIR . 'modules/unity-modaal/',
-            'url'         => UNITY_A11Y_BB_URL . 'modules/unity-modaal/',
+            'category'    => __( 'Unity', 'bb-a11y-unity' ),
+            'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-modaal/',
+            'url'         => BB_A11Y_UNITY_URL . 'modules/unity-modaal/',
         ]);
 
         /**
@@ -42,35 +42,35 @@ class UnityModaalModule extends FLBuilderModule {
 
 FLBuilder::register_module( 'UnityModaalModule', [
     'unity-modaal-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __( 'General', 'bb-a11y-unity' ),
         'sections' => [
             'content' => [
-                'title'  => __( 'Content', 'unity-a11y-bb' ),
+                'title'  => __( 'Content', 'bb-a11y-unity' ),
                 'fields' => [
                     'cta_text' => [
                         'type'  => 'text',
-                        'label' => __( 'CTA Text', 'unity-a11y-bb' ),
+                        'label' => __( 'CTA Text', 'bb-a11y-unity' ),
                     ],
                     'cta_icon' => [
                         'type'        => 'icon',
-                        'label'       => __( 'CTA Icon', 'unity-a11y-bb' ),
+                        'label'       => __( 'CTA Icon', 'bb-a11y-unity' ),
                         'show_remove' => true,
                     ],
                     'cta_target' => [
                         'type'  => 'text',
                         'help'  => 'Optional: provide an ID to target from the call to action button. This overrides the default auto-generated ID for the link’s href.',
-                        'label' => __( 'CTA Target', 'unity-a11y-bb' ),
+                        'label' => __( 'CTA Target', 'bb-a11y-unity' ),
                     ],
                     'modaal_id' => [
                         'type'  => 'text',
                         'help'  => 'Optional: set an ID for targeting the inline content. This overrides the default auto-generated ID for targeting the inline content.',
-                        'label' => __( 'Modaal ID', 'unity-a11y-bb' ),
+                        'label' => __( 'Modaal ID', 'bb-a11y-unity' ),
                     ],
                     'modaal_content' => [
                         'type'          => 'editor',
                         'media_buttons' => false,
                         'wpautop'       => false,
-                        'label'         => __( 'Modaal Content', 'unity-a11y-bb' ),
+                        'label'         => __( 'Modaal Content', 'bb-a11y-unity' ),
                     ],
                 ],
             ],

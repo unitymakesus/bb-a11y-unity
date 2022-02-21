@@ -1,4 +1,6 @@
 # Changelog
 
-## 1.0.0: August 27, 2020
-* Initial release
+## 1.0.0-beta: February 21, 2022
+* Initial beta release.
+* Rename plugin and update text domain.
+* Update README.

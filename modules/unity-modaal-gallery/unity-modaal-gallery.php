@@ -4,12 +4,12 @@ class UnityModaalGalleryModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'        => __( 'Modaal Gallery', 'unity-a11y-bb' ),
-            'description' => __( 'A button that opens an accessible Modaal dialog window with multiple images.', 'unity-a11y-bb' ),
+            'name'        => __( 'Modaal Gallery', 'bb-a11y-unity' ),
+            'description' => __( 'A button that opens an accessible Modaal dialog window with multiple images.', 'bb-a11y-unity' ),
             'icon'        => 'format-gallery.svg',
-            'category'    => __( 'Unity', 'unity-a11y-bb' ),
-            'dir'         => UNITY_A11Y_BB_DIR . 'modules/unity-modaal-gallery/',
-            'url'         => UNITY_A11Y_BB_URL . 'modules/unity-modaal-gallery/',
+            'category'    => __( 'Unity', 'bb-a11y-unity' ),
+            'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-modaal-gallery/',
+            'url'         => BB_A11Y_UNITY_URL . 'modules/unity-modaal-gallery/',
         ]);
 
         /**

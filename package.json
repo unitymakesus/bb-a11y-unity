@@ -1,7 +1,5 @@
 {
-  "name": "unity-a11y-bb",
-  "version": "1.0.0",
-  "description": "",
+  "name": "bb-a11y-unity",
   "engines": {
     "node": ">= 12.0.0"
   },

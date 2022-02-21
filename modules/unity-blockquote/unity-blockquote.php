@@ -3,12 +3,12 @@
 class UnityBlockquoteModule extends FLBuilderModule {
     public function __construct() {
         parent::__construct([
-            'name'        => __( 'Blockquote', 'unity-a11y-bb' ),
-            'description' => __( 'A semantic blockquote module.', 'unity-a11y-bb' ),
+            'name'        => __( 'Blockquote', 'bb-a11y-unity' ),
+            'description' => __( 'A semantic blockquote module.', 'bb-a11y-unity' ),
             'icon'        => 'format-quote.svg',
-            'category'    => __( 'Unity', 'unity-a11y-bb' ),
-            'dir'         => UNITY_A11Y_BB_DIR . 'modules/unity-blockquote/',
-            'url'         => UNITY_A11Y_BB_URL . 'modules/unity-blockquote/',
+            'category'    => __( 'Unity', 'bb-a11y-unity' ),
+            'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-blockquote/',
+            'url'         => BB_A11Y_UNITY_URL . 'modules/unity-blockquote/',
         ]);
 
         /**
@@ -20,19 +20,19 @@ class UnityBlockquoteModule extends FLBuilderModule {
 
 FLBuilder::register_module('UnityBlockquoteModule', [
     'unity-blockquote-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __( 'General', 'bb-a11y-unity' ),
         'sections' => [
             'general' => [
                 'title'  => '',
                 'fields' => [
                     'blockquote' => [
                         'type'  => 'textarea',
-                        'label' => __( 'Blockquote', 'unity-a11y-bb' ),
+                        'label' => __( 'Blockquote', 'bb-a11y-unity' ),
                         'rows'  => '6'
                     ],
                     'cite' => [
                         'type'  => 'text',
-                        'label' => __( 'Cite', 'unity-a11y-bb' ),
+                        'label' => __( 'Cite', 'bb-a11y-unity' ),
                     ]
                 ],
             ],

@@ -4,13 +4,13 @@ class UnityVideoModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'            => __( 'Video', 'unity-a11y-bb' ),
-            'description'     => __( 'An accessible video player powered by Plyr.', 'unity-a11y-bb' ),
+            'name'            => __( 'Video', 'bb-a11y-unity' ),
+            'description'     => __( 'An accessible video player powered by Plyr.', 'bb-a11y-unity' ),
             'icon'            => 'format-video.svg',
-            'category'        => __( 'Unity', 'unity-a11y-bb' ),
+            'category'        => __( 'Unity', 'bb-a11y-unity' ),
             'partial_refresh' => false,
-            'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-video/',
-            'url'             => UNITY_A11Y_BB_URL . 'modules/unity-video/',
+            'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-video/',
+            'url'             => BB_A11Y_UNITY_URL . 'modules/unity-video/',
         ]);
 
         /**
@@ -28,7 +28,7 @@ class UnityVideoModule extends FLBuilderModule {
 
 FLBuilder::register_module('UnityVideoModule', [
     'unity-video-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __( 'General', 'bb-a11y-unity' ),
         'sections' => [
             'general' => [
                 'title'  => '',

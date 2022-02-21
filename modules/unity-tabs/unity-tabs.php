@@ -6,13 +6,13 @@ class UnityTabsModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'            => __( 'Tabs', 'unity-a11y-bb' ),
-            'description'     => __( 'An accessible tabs pattern.', 'unity-a11y-bb' ),
+            'name'            => __( 'Tabs', 'bb-a11y-unity' ),
+            'description'     => __( 'An accessible tabs pattern.', 'bb-a11y-unity' ),
             'icon'            => 'layout.svg',
-            'category'        => __( 'Unity', 'unity-a11y-bb' ),
+            'category'        => __( 'Unity', 'bb-a11y-unity' ),
             'partial_refresh' => false,
-            'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-tabs/',
-            'url'             => UNITY_A11Y_BB_URL . 'modules/unity-tabs/',
+            'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-tabs/',
+            'url'             => BB_A11Y_UNITY_URL . 'modules/unity-tabs/',
         ]);
 
         /**

@@ -6,13 +6,13 @@ class UnityAccordionModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'            => __( 'Accordion', 'unity-a11y-bb' ),
-            'description'     => __( 'An accessible accordion pattern.', 'unity-a11y-bb' ),
+            'name'            => __( 'Accordion', 'bb-a11y-unity' ),
+            'description'     => __( 'An accessible accordion pattern.', 'bb-a11y-unity' ),
             'icon'            => 'layout.svg',
-            'category'        => __( 'Unity', 'unity-a11y-bb' ),
+            'category'        => __( 'Unity', 'bb-a11y-unity' ),
             'partial_refresh' => false,
-            'dir'             => UNITY_A11Y_BB_DIR . 'modules/unity-accordion/',
-            'url'             => UNITY_A11Y_BB_URL . 'modules/unity-accordion/',
+            'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-accordion/',
+            'url'             => BB_A11Y_UNITY_URL . 'modules/unity-accordion/',
         ]);
 
         /**
@@ -70,7 +70,7 @@ class UnityAccordionModule extends FLBuilderModule {
 
 FLBuilder::register_module('UnityAccordionModule', [
     'unity-accordion-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __( 'General', 'bb-a11y-unity' ),
         'sections' => [
             'general' => [
                 'title'  => '',

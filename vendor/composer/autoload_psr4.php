@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Spatie\\Color\\' => array($vendorDir . '/spatie/color/src'),
+    'Appsero\\' => array($vendorDir . '/appsero/client/src'),
 );

@@ -69,4 +69,16 @@ add_action('init', function () {
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-tabs/unity-tabs.php';
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-video/unity-video.php';
     }
+
+    if (class_exists('Appsero\Client')) {
+        $client = new Appsero\Client('', 'Accessible Modules for Beaver Builder', __FILE__);
+        $client->insights()->hide_notice()->init();
+        $client->updater();
+        $client->license()->add_settings_page([
+            'type'       => 'options',
+            'menu_title' => __('Accessible Modules', 'bb-a11y-unity'),
+            'page_title' => __('License Settings', 'bb-a11y-unity'),
+            'menu_slug'  => 'bb_a11y_unity_settings',
+        ]);
+    }
 });

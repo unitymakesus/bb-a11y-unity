@@ -30,14 +30,24 @@
     transition: all 0.2s linear;
     cursor: pointer;
 
+    > * {
+      pointer-events: none;
+    }
+
     &:hover,
     &:focus {
-      text-decoration: underline;
+      span {
+        text-decoration: underline;
+      }
     }
 
     &:focus {
       outline-offset: -6px;
       outline: 2px dotted currentColor;
+    }
+
+    > i {
+      margin-left: 0.5rem;
     }
   }
 

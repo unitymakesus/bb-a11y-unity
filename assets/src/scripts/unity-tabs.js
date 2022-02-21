@@ -29,7 +29,7 @@ function initTabs(tablist) {
   };
 
   // Bind listeners
-  for (i = 0; i < tabs.length; ++i) {
+  for (let i = 0; i < tabs.length; ++i) {
     addListeners(i);
   };
 
@@ -115,7 +115,7 @@ function initTabs(tablist) {
   function switchTabOnArrowPress (event) {
     var pressed = event.keyCode;
 
-    for (x = 0; x < tabs.length; x++) {
+    for (let x = 0; x < tabs.length; x++) {
       tabs[x].addEventListener('focus', focusEventHandler);
     };
 
@@ -159,13 +159,13 @@ function initTabs(tablist) {
 
   // Deactivate all tabs and tab panels
   function deactivateTabs () {
-    for (t = 0; t < tabs.length; t++) {
+    for (let t = 0; t < tabs.length; t++) {
       tabs[t].setAttribute('tabindex', '-1');
       tabs[t].setAttribute('aria-selected', 'false');
       tabs[t].removeEventListener('focus', focusEventHandler);
     };
 
-    for (p = 0; p < panels.length; p++) {
+    for (let p = 0; p < panels.length; p++) {
       panels[p].setAttribute('hidden', 'hidden');
     };
   };

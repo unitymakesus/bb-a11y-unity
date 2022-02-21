@@ -4,7 +4,10 @@
             <?php $i = 0; foreach ($settings->tabs as $tab) : ?>
                 <?php $attrs = $module->get_tab_attributes($i); ?>
                 <button class="unity-tabs__tab" role="tab" id="<?php echo esc_attr($attrs['id']); ?>" aria-selected="<?php echo esc_attr($attrs['selected']); ?>" aria-controls="<?php echo esc_attr($attrs['controls']); ?>" <?php echo esc_attr($attrs['tabindex']); ?>>
-                    <?php echo $tab->title; ?>
+                    <span><?php echo $tab->title; ?></span>
+                    <?php if (!empty($tab->icon)) : ?>
+                        <i class="fl-button-icon fl-button-icon-before <?php echo $tab->icon; ?>" aria-hidden="true"></i>
+                    <?php endif; ?>
                 </button>
             <?php $i++; endforeach; ?>
         </div>

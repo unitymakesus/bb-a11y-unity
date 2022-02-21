@@ -137,6 +137,11 @@ FLBuilder::register_settings_form('tabs_form', [
                             'type'  => 'text',
                             'label' => __( 'Title', '' ),
                         ],
+                        'icon' => [
+                            'type'        => 'icon',
+                            'label'       => __( 'Icon', '' ),
+                            'show_remove' => true,
+                        ],
                         'content' => [
                             'type'          => 'editor',
                             'label'         => __( 'Content', '' ),

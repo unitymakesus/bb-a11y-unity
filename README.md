@@ -10,7 +10,7 @@ Make sure all dependencies have been installed before moving on:
 * [Beaver Builder](https://www.wpbeaverbuilder.com)
 * [PHP](https://secure.php.net/manual/en/install.php) >= 7.4
 * [Composer](https://getcomposer.org)
-* [Node.js](http://nodejs.org/) >= 12.0.x
+* [Node.js](http://nodejs.org/) >= 16.0.x
 
 Install plugin dependencies:
 `npm install && composer install`

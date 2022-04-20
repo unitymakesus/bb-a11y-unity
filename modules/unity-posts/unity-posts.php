@@ -16,7 +16,7 @@ class UnityPostsModule extends FLBuilderModule {
         /**
          * CSS
          */
-        $this->add_css('unity-posts-css', asset_path('styles/unity-posts.css'));
+        $this->add_css('unity-posts-css', Unity\asset_path('styles/unity-posts.css'));
     }
 }
 

@@ -18,12 +18,12 @@ class UnityTabsModule extends FLBuilderModule {
         /**
          * CSS
          */
-        $this->add_css('unity-tabs-css', asset_path('styles/unity-tabs.css'));
+        $this->add_css('unity-tabs-css', Unity\asset_path('styles/unity-tabs.css'));
 
         /**
          * JS
          */
-        $this->add_js('unity-tabs-js', asset_path('scripts/unity-tabs.js'), [], null, true);
+        $this->add_js('unity-tabs-js', Unity\asset_path('scripts/unity-tabs.js'), [], null, true);
     }
 
     /**

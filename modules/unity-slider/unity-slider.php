@@ -18,12 +18,12 @@ class UnitySliderModule extends FLBuilderModule {
          */
         $this->add_css('slick', 'https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css');
         $this->add_css('slick-a11y-theme', 'https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css');
-        $this->add_css('unity-slider-css', asset_path('styles/unity-slider.css'));
+        $this->add_css('unity-slider-css', Unity\asset_path('styles/unity-slider.css'));
 
         /**
          * JS
          */
-        $this->add_js('unity-slider-js', asset_path('scripts/unity-slider.js'), ['jquery'], null, true);
+        $this->add_js('unity-slider-js', Unity\asset_path('scripts/unity-slider.js'), ['jquery'], null, true);
     }
 
     /**

@@ -14,7 +14,7 @@ class UnityBlockquoteModule extends FLBuilderModule {
         /**
          * CSS
          */
-        $this->add_css('unity-blockquote-css', asset_path('styles/unity-blockquote.css'));
+        $this->add_css('unity-blockquote-css', Unity\asset_path('styles/unity-blockquote.css'));
     }
 }
 

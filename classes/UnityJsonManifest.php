@@ -1,5 +1,7 @@
 <?php
 
+namespace Unity;
+
 /**
  * Get paths for assets.
  */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Unity;
+namespace Unity\A11Y;
 
 /**
  * Get paths for assets.

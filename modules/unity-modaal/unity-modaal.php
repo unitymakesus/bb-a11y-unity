@@ -18,14 +18,14 @@ class UnityModaalModule extends FLBuilderModule {
          * CSS
          */
         $this->add_css('modaal-css', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css');
-        $this->add_css('unity-modaal-css', Unity\asset_path('styles/unity-modaal.css'));
+        $this->add_css('unity-modaal-css', Unity\A11Y\asset_path('styles/unity-modaal.css'));
 
 
         /**
          * JS
          */
         $this->add_js('modaal-js', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js', ['jquery']);
-        $this->add_js('unity-modaal-js', Unity\asset_path('scripts/unity-modaal.js'), ['jquery', 'modaal-js'], null, true);
+        $this->add_js('unity-modaal-js', Unity\A11Y\asset_path('scripts/unity-modaal.js'), ['jquery', 'modaal-js'], null, true);
     }
 
     /**

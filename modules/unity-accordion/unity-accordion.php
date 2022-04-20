@@ -18,12 +18,12 @@ class UnityAccordionModule extends FLBuilderModule {
         /**
          * CSS
          */
-        $this->add_css('unity-accordion-css', Unity\asset_path('styles/unity-accordion.css'));
+        $this->add_css('unity-accordion-css', Unity\A11Y\asset_path('styles/unity-accordion.css'));
 
         /**
          * JS
          */
-        $this->add_js('unity-accordion-js', Unity\asset_path('scripts/unity-accordion.js'), [], null, true);
+        $this->add_js('unity-accordion-js', Unity\A11Y\asset_path('scripts/unity-accordion.js'), [], null, true);
     }
 
     /**

@@ -17,12 +17,12 @@ class UnityAudioModule extends FLBuilderModule {
          * CSS
          */
         $this->add_css('unity-audio-css-plyr', 'https://cdn.plyr.io/3.6.8/plyr.css');
-        $this->add_css('unity-audio-css', Unity\asset_path('styles/unity-audio.css'));
+        $this->add_css('unity-audio-css', Unity\A11Y\asset_path('styles/unity-audio.css'));
 
         /**
          * JS
          */
-        $this->add_js('unity-audio-js', Unity\asset_path('scripts/unity-audio.js'), [], null, true);
+        $this->add_js('unity-audio-js', Unity\A11Y\asset_path('scripts/unity-audio.js'), [], null, true);
     }
 }
 

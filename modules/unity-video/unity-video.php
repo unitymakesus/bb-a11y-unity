@@ -17,12 +17,12 @@ class UnityVideoModule extends FLBuilderModule {
          * CSS
          */
         $this->add_css('unity-video-css-plyr', 'https://cdn.plyr.io/3.6.9/plyr.css');
-        $this->add_css('unity-video-css', Unity\asset_path('styles/unity-video.css'));
+        $this->add_css('unity-video-css', Unity\A11Y\asset_path('styles/unity-video.css'));
 
         /**
          * JS
          */
-        $this->add_js('unity-video-js', Unity\asset_path('scripts/unity-video.js'), [], null, true);
+        $this->add_js('unity-video-js', Unity\A11Y\asset_path('scripts/unity-video.js'), [], null, true);
     }
 }
 

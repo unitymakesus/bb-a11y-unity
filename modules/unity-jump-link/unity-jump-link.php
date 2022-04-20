@@ -15,12 +15,12 @@ class UnityJumpLinkModule extends FLBuilderModule {
         /**
          * CSS
          */
-        $this->add_css('unity-jump-link-css', Unity\asset_path('styles/unity-jump-link.css'));
+        $this->add_css('unity-jump-link-css', Unity\A11Y\asset_path('styles/unity-jump-link.css'));
 
         /**
          * JS
          */
-        $this->add_js('unity-jump-link-js', Unity\asset_path('scripts/unity-jump-link.js'), ['jquery'], null, true);
+        $this->add_js('unity-jump-link-js', Unity\A11Y\asset_path('scripts/unity-jump-link.js'), ['jquery'], null, true);
     }
 }
 

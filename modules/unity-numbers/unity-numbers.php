@@ -15,12 +15,12 @@ class UnityNumbersModule extends FLBuilderModule {
         /**
          * CSS
          */
-        $this->add_css('unity-numbers-css', Unity\asset_path('styles/unity-numbers.css'));
+        $this->add_css('unity-numbers-css', Unity\A11Y\asset_path('styles/unity-numbers.css'));
 
         /**
          * JS
          */
-        $this->add_js('unity-numbers-js', Unity\asset_path('scripts/unity-numbers.js'), [], '', true);
+        $this->add_js('unity-numbers-js', Unity\A11Y\asset_path('scripts/unity-numbers.js'), [], '', true);
     }
 }
 

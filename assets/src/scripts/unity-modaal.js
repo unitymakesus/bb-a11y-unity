@@ -1,5 +1,5 @@
 import $ from 'jquery';
 
-$('.unity-modaal__inline').modaal({
+$('.unity-modaal__button').modaal({
   type: 'inline',
 });

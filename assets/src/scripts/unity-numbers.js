@@ -16,7 +16,7 @@ const initCountUp = (wrapperElem) => {
       duration: prefersReducedMotion() ? 0 : 1.5,
       suffix: numberSuffix || '',
       prefix: numberPrefix || '',
-      separator: numberSeparator,
+      separator: numberSeparator || ',',
       useGrouping: true,
     };
 

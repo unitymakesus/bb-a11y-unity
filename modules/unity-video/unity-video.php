@@ -7,7 +7,7 @@ class UnityVideoModule extends FLBuilderModule {
             'name'            => __( 'Video', 'bb-a11y-unity' ),
             'description'     => __( 'An accessible video player powered by Plyr.', 'bb-a11y-unity' ),
             'icon'            => 'format-video.svg',
-            'category'        => __( 'Unity', 'bb-a11y-unity' ),
+            'category'        => __( 'Accessible', 'bb-a11y-unity' ),
             'partial_refresh' => false,
             'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-video/',
             'url'             => BB_A11Y_UNITY_URL . 'modules/unity-video/',

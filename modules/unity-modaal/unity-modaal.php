@@ -9,7 +9,7 @@ class UnityModaalModule extends FLBuilderModule {
             'name'        => __( 'Modaal', 'bb-a11y-unity' ),
             'description' => __( 'A button that opens an accessible Modaal dialog window.', 'bb-a11y-unity' ),
             'icon'        => 'button.svg',
-            'category'    => __( 'Unity', 'bb-a11y-unity' ),
+            'category'    => __( 'Accessible', 'bb-a11y-unity' ),
             'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-modaal/',
             'url'         => BB_A11Y_UNITY_URL . 'modules/unity-modaal/',
         ]);

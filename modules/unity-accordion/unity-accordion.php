@@ -9,7 +9,7 @@ class UnityAccordionModule extends FLBuilderModule {
             'name'            => __( 'Accordion', 'bb-a11y-unity' ),
             'description'     => __( 'An accessible accordion pattern.', 'bb-a11y-unity' ),
             'icon'            => 'layout.svg',
-            'category'        => __( 'Unity', 'bb-a11y-unity' ),
+            'category'        => __( 'Accessible', 'bb-a11y-unity' ),
             'partial_refresh' => false,
             'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-accordion/',
             'url'             => BB_A11Y_UNITY_URL . 'modules/unity-accordion/',

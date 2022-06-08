@@ -6,7 +6,7 @@ class UnityBlockquoteModule extends FLBuilderModule {
             'name'        => __( 'Blockquote', 'bb-a11y-unity' ),
             'description' => __( 'A semantic blockquote module.', 'bb-a11y-unity' ),
             'icon'        => 'format-quote.svg',
-            'category'    => __( 'Unity', 'bb-a11y-unity' ),
+            'category'    => __( 'Accessible', 'bb-a11y-unity' ),
             'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-blockquote/',
             'url'         => BB_A11Y_UNITY_URL . 'modules/unity-blockquote/',
         ]);

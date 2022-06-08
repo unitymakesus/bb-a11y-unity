@@ -7,7 +7,7 @@ class UnityModaalGalleryModule extends FLBuilderModule {
             'name'        => __( 'Modaal Gallery', 'bb-a11y-unity' ),
             'description' => __( 'A button that opens an accessible Modaal dialog window with multiple images.', 'bb-a11y-unity' ),
             'icon'        => 'format-gallery.svg',
-            'category'    => __( 'Unity', 'bb-a11y-unity' ),
+            'category'    => __( 'Accessible', 'bb-a11y-unity' ),
             'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-modaal-gallery/',
             'url'         => BB_A11Y_UNITY_URL . 'modules/unity-modaal-gallery/',
         ]);

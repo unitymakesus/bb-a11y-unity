@@ -7,7 +7,7 @@ class UnityPostsModule extends FLBuilderModule {
             'name'            => __( 'Posts', 'bb-a11y-unity' ),
             'description'     => __( 'A feed of posts.', 'bb-a11y-unity' ),
             'icon'            => 'schedule.svg',
-            'category'        => __( 'Unity', 'bb-a11y-unity' ),
+            'category'        => __( 'Accessible', 'bb-a11y-unity' ),
             'partial_refresh' => true,
             'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-posts/',
             'url'             => BB_A11Y_UNITY_URL . 'modules/unity-posts/',

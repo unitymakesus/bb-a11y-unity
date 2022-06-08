@@ -9,7 +9,7 @@ class UnityTabsModule extends FLBuilderModule {
             'name'            => __( 'Tabs', 'bb-a11y-unity' ),
             'description'     => __( 'An accessible tabs pattern.', 'bb-a11y-unity' ),
             'icon'            => 'layout.svg',
-            'category'        => __( 'Unity', 'bb-a11y-unity' ),
+            'category'        => __( 'Accessible', 'bb-a11y-unity' ),
             'partial_refresh' => false,
             'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-tabs/',
             'url'             => BB_A11Y_UNITY_URL . 'modules/unity-tabs/',

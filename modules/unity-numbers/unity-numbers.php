@@ -6,7 +6,7 @@ class UnityNumbersModule extends FLBuilderModule {
             'name'            => __( 'Numbers', '' ),
             'description'     => __( '' ),
             'icon'            => 'chart-bar.svg',
-            'category'        => __( 'Unity', '' ),
+            'category'        => __( 'Accessible', 'bb-a11y-unity' ),
             'partial-refresh' => true,
             'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-numbers/',
             'url'             => BB_A11Y_UNITY_DIR . 'modules/unity-numbers/',

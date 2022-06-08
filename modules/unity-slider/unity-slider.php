@@ -7,7 +7,7 @@ class UnitySliderModule extends FLBuilderModule {
             'name'            => __( 'Slider', 'bb-a11y-unity' ),
             'description'     => __( '', 'bb-a11y-unity' ),
             'icon'            => 'slides.svg',
-            'category'        => __( 'Unity', 'bb-a11y-unity' ),
+            'category'        => __( 'Accessible', 'bb-a11y-unity' ),
             'partial_refresh' => true,
             'dir'             => BB_A11Y_UNITY_DIR . 'modules/unity-slider/',
             'url'             => BB_A11Y_UNITY_URL . 'modules/unity-slider/',

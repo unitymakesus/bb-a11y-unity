@@ -7,7 +7,7 @@ class UnityJumpLinkModule extends FLBuilderModule {
             'name'        => __( 'Jump Link', 'bb-a11y-unity' ),
             'description' => __( 'A better jump link with accessible focus management.', 'bb-a11y-unity' ),
             'icon'        => 'button.svg',
-            'category'    => __( 'Unity', 'bb-a11y-unity' ),
+            'category'    => __( 'Accessible', 'bb-a11y-unity' ),
             'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-jump-link/',
             'url'         => BB_A11Y_UNITY_URL . 'modules/unity-jump-link/',
         ]);

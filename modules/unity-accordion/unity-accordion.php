@@ -37,7 +37,6 @@ class UnityAccordionModule extends FLBuilderModule {
         return [
             'id'       => "{$this->node}-trigger-{$index}",
             'controls' => "{$this->node}-panel-{$index}",
-            'expanded' => $index === 0 ? 'true' : 'false',
         ];
     }
 
@@ -52,7 +51,6 @@ class UnityAccordionModule extends FLBuilderModule {
         return [
             'id'         => "{$this->node}-panel-{$index}",
             'labelledby' => "{$this->node}-trigger-{$index}",
-            'hidden'     => $index > 0 ? 'hidden' : '',
         ];
     }
 

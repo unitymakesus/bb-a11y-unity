@@ -55,14 +55,13 @@ class UnityAccordionModule extends FLBuilderModule {
     }
 
     /**
-     * Process a Hex color value into an RGB object for the accessible color calc() function in the module's CSS.
+     * Retrieve the accent color selected in this module.
      *
-     * @param string $str
-     * @return Spatie\Color\Hex
+     * @return string
      */
-    public function processHexToRgb($str)
+    public function get_module_accent_color()
     {
-        return Hex::fromString('#' . $str)->toRgb();
+        return Hex::fromString('#' . $this->settings->accent_color);
     }
 }
 

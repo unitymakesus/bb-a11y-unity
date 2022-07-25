@@ -1,22 +1,21 @@
 <?php if (!empty($settings->accent_color)) : ?>
-    <?php $rgb = $module->processHexToRgb($settings->accent_color); ?>
+    <?php $accent_color = $module->get_module_accent_color(); ?>
     .fl-node-<?php echo $id; ?> .unity-tabs {
-        --red: <?php echo $rgb->red(); ?>;
-        --green: <?php echo $rgb->green(); ?>;
-        --blue: <?php echo $rgb->blue(); ?>;
-        --accessible-color: calc(((((var(--red) * 299) + (var(--green) * 587) + (var(--blue) * 114)) / 1000) - 128) * -1000);
+        --theme-primary-color: <?php echo $accent_color ?>;
+        --theme-primary-a11y-color: <?php echo Unity\A11Y\get_a11y_text_color($accent_color); ?>;
     }
+
     .fl-node-<?php echo $id; ?> .unity-tabs__tab {
-        border-color: rgb(var(--red), var(--green), var(--blue));
+        border-color: var(--theme-primary-color);
     }
 
     .fl-node-<?php echo $id; ?> .unity-tabs__tab[aria-selected="true"] {
-        border-color: rgb(var(--red), var(--green), var(--blue)) !important;
-        color: rgb(var(--accessible-color), var(--accessible-color), var(--accessible-color)) !important;
-        background-color: rgb(var(--red), var(--green), var(--blue)) !important;
+        border-color: var(--theme-primary-color);
+        color: var(--theme-primary-a11y-color);
+        background-color: var(--theme-primary-color);
     }
 
     .fl-node-<?php echo $id; ?> .unity-tabs.unity-tabs--horizontal > [role="tablist"] {
-        border-bottom-color: rgb(var(--red), var(--green), var(--blue));
+        border-bottom-color: var(--theme-primary-color);
     }
 <?php endif; ?>

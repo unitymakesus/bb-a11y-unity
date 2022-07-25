@@ -3,7 +3,7 @@
  * Plugin Name:       Accessible Modules for Beaver Builder
  * Plugin URI:        https://github.com/unitymakesus/bb-a11y-unity
  * Description:       A set of accessible-first modules for Beaver Builder.
- * Version:           1.0.0-beta-3
+ * Version:           1.0.0
  * Author:            Unity Web Agency
  * Author URI:        https://unitywebagency.com
  * GitHub Plugin URI: unitymakesus/bb-a11y-unity
@@ -13,14 +13,14 @@
  * Domain Path:       /languages
  */
 
-define('BB_A11Y_UNITY_VERSION', '1.0.0-beta-3');
+define('BB_A11Y_UNITY_VERSION', '1.0.0');
 define('BB_A11Y_UNITY_DIR', plugin_dir_path(__FILE__));
 define('BB_A11Y_UNITY_URL', plugins_url('/', __FILE__ ));
 
 /**
  * Check for required WordPress plugins.
  *
- * @since 1.0.0-beta
+ * @since 1.0.0
  */
 add_action('admin_notices', function () {
     $requires = [];
@@ -47,7 +47,7 @@ add_action('admin_notices', function () {
 /**
  * Instantiate our Beaver Builder module classes.
  *
- * @since 1.0.0-beta
+ * @since 1.0.0
  */
 add_action('init', function () {
     require __DIR__ . '/vendor/autoload.php';

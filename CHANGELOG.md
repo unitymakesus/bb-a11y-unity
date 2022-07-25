@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 July 25, 2022
+* Official v1.0.0 release!
+* Added improved color contrast check based on WCAG 2.0.
+* First item in accordion module will be collapsed by default.
+* Minor bug fixes.
+
 ## 1.0.0-beta-3: May 23, 2022
 * Fix JS selector in Modaal module init.
 * Add fallback number separator in Numbers module init to avoid undefined error.

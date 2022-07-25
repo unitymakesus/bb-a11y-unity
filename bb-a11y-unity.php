@@ -52,6 +52,10 @@ add_action('admin_notices', function () {
 add_action('init', function () {
     require __DIR__ . '/vendor/autoload.php';
 
+    if (!function_exists('get_a11y_text_color')) {
+        require_once BB_A11Y_UNITY_DIR . 'inc/helpers.php';
+    }
+
     if (!class_exists('UnityJsonManifest')) {
         require_once BB_A11Y_UNITY_DIR . 'classes/UnityJsonManifest.php';
     }

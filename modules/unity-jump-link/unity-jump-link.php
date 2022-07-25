@@ -1,53 +1,44 @@
 <?php
 
 class UnityJumpLinkModule extends FLBuilderModule {
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct([
-            'name'        => __( 'Jump Link', 'unity-a11y-bb' ),
-            'description' => __( 'A better jump link with accessible focus management.', 'unity-a11y-bb' ),
+            'name'        => __( 'Jump Link', 'bb-a11y-unity' ),
+            'description' => __( 'A better jump link with accessible focus management.', 'bb-a11y-unity' ),
             'icon'        => 'button.svg',
-            'category'    => __( 'Unity', 'unity-a11y-bb' ),
-            'dir'         => UNITY_A11Y_BB_DIR . 'modules/unity-jump-link/',
-            'url'         => UNITY_A11Y_BB_URL . 'modules/unity-jump-link/',
+            'category'    => __( 'Accessible', 'bb-a11y-unity' ),
+            'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-jump-link/',
+            'url'         => BB_A11Y_UNITY_URL . 'modules/unity-jump-link/',
         ]);
+
+        /**
+         * CSS
+         */
+        $this->add_css('unity-jump-link-css', Unity\A11Y\asset_path('styles/unity-jump-link.css'));
 
         /**
          * JS
          */
-        $this->add_js('unity-a11y-bb-jump', asset_path('scripts/unity-jump-link.js'), ['jquery'], null, true);
+        $this->add_js('unity-jump-link-js', Unity\A11Y\asset_path('scripts/unity-jump-link.js'), ['jquery'], null, true);
     }
 }
 
 FLBuilder::register_module('UnityJumpLinkModule', [
     'unity-jump-link-general' => [
-        'title'    => __( 'General', 'unity-a11y-bb' ),
+        'title'    => __( 'General', 'bb-a11y-unity' ),
         'sections' => [
             'content' => [
-                'title'  => __( 'Content', 'unity-a11y-bb' ),
+                'title'  => __( 'Content', 'bb-a11y-unity' ),
                 'fields' => [
                     'cta_text' => [
                         'type'  => 'text',
-                        'label' => __( 'CTA Text', 'unity-a11y-bb' ),
+                        'label' => __( 'CTA Text', 'bb-a11y-unity' ),
                     ],
                     'cta_link' => [
                         'type'  => 'link',
-                        'label' => __( 'CTA Link', 'unity-a11y-bb' ),
+                        'label' => __( 'CTA Link', 'bb-a11y-unity' ),
                     ]
-                ],
-            ],
-        ],
-    ],
-    'unity-jump-link-style' => [
-        'title'    => __( 'Style', 'unity-a11y-bb' ),
-        'sections' => [
-            'style'  => [
-                'title'  => '',
-                'fields' => [
-                    'align'        => [
-                        'type'       => 'align',
-                        'label'      => __( 'Align', 'unity-a11y-bb' ),
-                        'default'    => 'left',
-                    ],
                 ],
             ],
         ],

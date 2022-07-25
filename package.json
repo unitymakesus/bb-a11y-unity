@@ -1,13 +1,14 @@
 {
-  "name": "unity-a11y-bb",
-  "version": "1.0.0",
-  "description": "",
+  "name": "bb-a11y-unity",
+  "engines": {
+    "node": ">= 16.0.0"
+  },
   "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "dev": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
   },
   "keywords": [
     "wordpress",
@@ -15,13 +16,15 @@
     "javascript"
   ],
   "devDependencies": {
-    "cross-env": "^7.0.2",
-    "laravel-mix": "^5.0.4",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "laravel-mix": "^6.0.31",
+    "node-sass": "^7.0.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0"
   },
   "dependencies": {
-    "modaal": "^0.4.4"
+    "@accessible360/accessible-slick": "^1.0.1",
+    "countup.js": "^2.0.8",
+    "modaal": "^0.4.4",
+    "plyr": "^3.6.9"
   }
 }

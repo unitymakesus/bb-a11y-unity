@@ -73,4 +73,16 @@ add_action('init', function () {
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-tabs/unity-tabs.php';
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-video/unity-video.php';
     }
+
+    if (class_exists('Appsero\Client')) {
+        $appsero = new Appsero\Client('e1cfbe31-bc5c-42f6-8410-3172203886a9', 'Accessible Modules for Beaver Builder', __FILE__);
+        $appsero->insights()->hide_notice()->init();
+        $appsero->updater();
+        $appsero->license()->add_settings_page([
+            'type'       => 'options',
+            'menu_title' => __('Accessible Modules for Beaver Builder', 'bb-a11y-unity'),
+            'page_title' => __('Accessible Modules for Beaver Builder Settings', 'bb-a11y-unity'),
+            'menu_slug'  => 'bb_a11y_unity_settings',
+        ]);
+    }
 });

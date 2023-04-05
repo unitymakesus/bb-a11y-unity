@@ -1,5 +1,5 @@
 # Accessible Modules for Beaver Builder
- A set accessible-first modules for Beaver Builder.
+A set of accessible-first modules for Beaver Builder.
 
 ## Development
 

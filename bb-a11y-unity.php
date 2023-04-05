@@ -3,7 +3,7 @@
  * Plugin Name:       Accessible Modules for Beaver Builder
  * Plugin URI:        https://github.com/unitymakesus/bb-a11y-unity
  * Description:       A set of accessible-first modules for Beaver Builder.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Unity Web Agency
  * Author URI:        https://unitywebagency.com
  * GitHub Plugin URI: unitymakesus/bb-a11y-unity
@@ -13,7 +13,7 @@
  * Domain Path:       /languages
  */
 
-define('BB_A11Y_UNITY_VERSION', '1.0.0');
+define('BB_A11Y_UNITY_VERSION', '1.0.1');
 define('BB_A11Y_UNITY_DIR', plugin_dir_path(__FILE__));
 define('BB_A11Y_UNITY_URL', plugins_url('/', __FILE__ ));
 
@@ -75,7 +75,7 @@ add_action('init', function () {
     }
 
     if (class_exists('Appsero\Client')) {
-        $appsero = new Appsero\Client('e1cfbe31-bc5c-42f6-8410-3172203886a9', 'Accessible Modules for Beaver Builder', __FILE__);
+        $appsero = new Appsero\Client('cefb5cad-d181-4cd1-a591-6cac9dcfba63', 'Accessible Modules for Beaver Builder', __FILE__);
         $appsero->insights()->hide_notice()->init();
         $appsero->updater();
         $appsero->license()->add_settings_page([

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 April 4, 2023
+* Setup Appsero SDK.
+* Update plugin license to GPL-3.0.
+* Add plugin README with stable tag.
+
 ## 1.0.0 July 25, 2022
 * Official v1.0.0 release!
 * Added improved color contrast check based on WCAG 2.0.

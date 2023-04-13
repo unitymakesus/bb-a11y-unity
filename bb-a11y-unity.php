@@ -84,10 +84,12 @@ add_action('init', function () {
 
         return array_merge($settings_link, $actions);
     }, 10, 1);
+});
 
-    /**
-     * Appsero SDK.
-     */
+/**
+ * Init Appsero SDK.
+ */
+function init_apperso_sdk() {
     if (class_exists('Appsero\Client')) {
         $appsero = new Appsero\Client('cefb5cad-d181-4cd1-a591-6cac9dcfba63', 'Accessible Modules for Beaver Builder', __FILE__);
         $appsero->insights()->hide_notice()->init();
@@ -99,4 +101,6 @@ add_action('init', function () {
             'menu_slug'  => 'bb-a11y-unity-settings',
         ]);
     }
-});
+}
+
+init_apperso_sdk();

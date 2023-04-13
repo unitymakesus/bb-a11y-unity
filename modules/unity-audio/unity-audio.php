@@ -33,6 +33,10 @@ FLBuilder::register_module('UnityAudioModule', [
             'general' => [
                 'title'  => '',
                 'fields' => [
+                    'audio_title' => [
+                        'type'  => 'text',
+                        'label' => __( 'Title', 'bb-a11y-unity' ),
+                    ],
                     'audio_mp3' => [
                         'type'        => 'text',
                         'label'       => __( 'MP3 URL', 'bb-a11y-unity' ),

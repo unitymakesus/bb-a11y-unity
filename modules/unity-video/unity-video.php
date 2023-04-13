@@ -45,6 +45,7 @@ FLBuilder::register_module('UnityVideoModule', [
                         'toggle'  => [
                             'html5' => [
                                 'fields'   => [
+                                    'video_title',
                                     'video_mp4',
                                     'video_webm',
                                     'video_captions_webvtt',
@@ -58,6 +59,10 @@ FLBuilder::register_module('UnityVideoModule', [
                                 'fields' => ['video_embed'],
                             ],
                         ],
+                    ],
+                    'video_title' => [
+                        'type'  => 'text',
+                        'label' => __( 'Title', 'bb-a11y-unity' ),
                     ],
                     'video_mp4' => [
                         'type'        => 'video',

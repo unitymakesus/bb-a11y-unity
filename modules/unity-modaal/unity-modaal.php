@@ -69,7 +69,7 @@ FLBuilder::register_module( 'UnityModaalModule', [
                     'modaal_content' => [
                         'type'          => 'editor',
                         'media_buttons' => false,
-                        'wpautop'       => false,
+                        'wpautop'       => true,
                         'label'         => __( 'Modaal Content', 'bb-a11y-unity' ),
                     ],
                 ],

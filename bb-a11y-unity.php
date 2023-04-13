@@ -13,7 +13,7 @@
  * Domain Path:       /languages
  */
 
-define('BB_A11Y_UNITY_VERSION', '1.0.2');
+define('BB_A11Y_UNITY_VERSION', '1.0.3');
 define('BB_A11Y_UNITY_DIR', plugin_dir_path(__FILE__));
 define('BB_A11Y_UNITY_URL', plugins_url('/', __FILE__ ));
 
@@ -89,7 +89,7 @@ add_action('init', function () {
 /**
  * Init Appsero SDK.
  */
-function init_apperso_sdk() {
+function appsero_init_tracker_bb_a11y_unity() {
     if (!class_exists('Appsero\Client')) {
         require_once __DIR__ . '/vendor/appsero/client/src/Client.php';
     }
@@ -105,4 +105,4 @@ function init_apperso_sdk() {
     ]);
 }
 
-init_apperso_sdk();
+appsero_init_tracker_bb_a11y_unity();

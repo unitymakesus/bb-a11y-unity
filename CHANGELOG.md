@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.3 April 13, 2023
+* Fix missing require for Appsero SDK.
+
 ## 1.0.2 April 13, 2023
 * Add settings page link to plugin action links.
 * Add title field to audio and video modules.

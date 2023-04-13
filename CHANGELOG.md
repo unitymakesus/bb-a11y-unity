@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 April 13, 2023
+* Add settings page link to plugin action links.
+* Add title field to audio and video modules.
+* Use wpautop on modaal content.
+* Normalize font sizes on accordion and tabs modules.
+* Remove Appsero SDK from init action hook.
+
 ## 1.0.1 April 4, 2023
 * Setup Appsero SDK.
 * Update plugin license to GPL-3.0.

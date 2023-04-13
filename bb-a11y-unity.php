@@ -74,6 +74,20 @@ add_action('init', function () {
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-video/unity-video.php';
     }
 
+    /**
+     * Add settings page to plugin action links.
+     */
+    add_filter('plugin_action_links_' . plugin_basename(__FILE__), function ($actions) {
+        $settings_link = [
+            '<a href="options-general.php?page=bb-a11y-unity-settings">' . esc_html__('Settings', 'bb-a11y-unity') . '</a>',
+        ];
+
+        return array_merge($settings_link, $actions);
+    }, 10, 1);
+
+    /**
+     * Appsero SDK.
+     */
     if (class_exists('Appsero\Client')) {
         $appsero = new Appsero\Client('cefb5cad-d181-4cd1-a591-6cac9dcfba63', 'Accessible Modules for Beaver Builder', __FILE__);
         $appsero->insights()->hide_notice()->init();
@@ -82,7 +96,7 @@ add_action('init', function () {
             'type'       => 'options',
             'menu_title' => __('Accessible Modules for Beaver Builder', 'bb-a11y-unity'),
             'page_title' => __('Accessible Modules for Beaver Builder Settings', 'bb-a11y-unity'),
-            'menu_slug'  => 'bb_a11y_unity_settings',
+            'menu_slug'  => 'bb-a11y-unity-settings',
         ]);
     }
 });

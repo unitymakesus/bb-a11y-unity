@@ -90,17 +90,19 @@ add_action('init', function () {
  * Init Appsero SDK.
  */
 function init_apperso_sdk() {
-    if (class_exists('Appsero\Client')) {
-        $appsero = new Appsero\Client('cefb5cad-d181-4cd1-a591-6cac9dcfba63', 'Accessible Modules for Beaver Builder', __FILE__);
-        $appsero->insights()->hide_notice()->init();
-        $appsero->updater();
-        $appsero->license()->add_settings_page([
-            'type'       => 'options',
-            'menu_title' => __('Accessible Modules for Beaver Builder', 'bb-a11y-unity'),
-            'page_title' => __('Accessible Modules for Beaver Builder Settings', 'bb-a11y-unity'),
-            'menu_slug'  => 'bb-a11y-unity-settings',
-        ]);
+    if (!class_exists('Appsero\Client')) {
+        require_once __DIR__ . '/vendor/appsero/client/src/Client.php';
     }
+
+    $appsero = new Appsero\Client('cefb5cad-d181-4cd1-a591-6cac9dcfba63', 'Accessible Modules for Beaver Builder', __FILE__);
+    $appsero->insights()->hide_notice()->init();
+    $appsero->updater();
+    $appsero->license()->add_settings_page([
+        'type'       => 'options',
+        'menu_title' => __('Accessible Modules for Beaver Builder', 'bb-a11y-unity'),
+        'page_title' => __('Accessible Modules for Beaver Builder Settings', 'bb-a11y-unity'),
+        'menu_slug'  => 'bb-a11y-unity-settings',
+    ]);
 }
 
 init_apperso_sdk();

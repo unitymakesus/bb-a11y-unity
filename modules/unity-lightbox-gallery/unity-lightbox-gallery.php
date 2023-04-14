@@ -1,48 +1,48 @@
 <?php
 
-class UnityModaalGalleryModule extends FLBuilderModule {
+class UnityLightboxGalleryModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct([
-            'name'        => __( 'Modaal Gallery', 'bb-a11y-unity' ),
-            'description' => __( 'A button that opens an accessible Modaal dialog window with multiple images.', 'bb-a11y-unity' ),
+            'name'        => __( 'Lightbox Gallery', 'bb-a11y-unity' ),
+            'description' => __( 'An accessible lightbox for image galleries.', 'bb-a11y-unity' ),
             'icon'        => 'format-gallery.svg',
             'category'    => __( 'Accessible', 'bb-a11y-unity' ),
-            'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-modaal-gallery/',
-            'url'         => BB_A11Y_UNITY_URL . 'modules/unity-modaal-gallery/',
+            'dir'         => BB_A11Y_UNITY_DIR . 'modules/unity-lightbox-gallery/',
+            'url'         => BB_A11Y_UNITY_URL . 'modules/unity-lightbox-gallery/',
         ]);
 
         /**
          * CSS
          */
         $this->add_css('modaal-css', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css');
-        $this->add_css('unity-modaal-gallery-css', Unity\A11Y\asset_path('styles/unity-modaal-gallery.css'));
+        $this->add_css('unity-lightbox-gallery-css', Unity\A11Y\asset_path('styles/unity-lightbox-gallery.css'));
 
         /**
          * JS
          */
         $this->add_js('modaal-js', 'https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js', ['jquery']);
-        $this->add_js('unity-modaal-gallery-js', Unity\A11Y\asset_path('scripts/unity-modaal-gallery.js'), ['jquery', 'modaal-js'], null, true);
+        $this->add_js('unity-lightbox-gallery-js', Unity\A11Y\asset_path('scripts/unity-lightbox-gallery.js'), ['jquery', 'modaal-js'], null, true);
     }
 }
 
-FLBuilder::register_module('UnityModaalGalleryModule', [
-    'unity-modaal-gallery-general' => [
+FLBuilder::register_module('UnityLightboxGalleryModule', [
+    'unity-lightbox-gallery-general' => [
         'title'    => __('General', ''),
         'sections' => [
             'content' => [
                 'title'  => '',
                 'fields' => [
-                    'images' => [
+                    'lightbox_images' => [
                         'type'  => 'multiple-photos',
+                        'label' => __('Images', ''),
                         'help'  => __('Be sure to add alt text to your images!', ''),
-                        'label' => __('Gallery', ''),
                     ],
                 ],
             ],
         ],
     ],
-    'unity-modaal-gallery-style' => [
+    'unity-lightbox-gallery-style' => [
         'title'    => __('Style', ''),
         'sections' => [
             'style' => [
@@ -53,7 +53,7 @@ FLBuilder::register_module('UnityModaalGalleryModule', [
                         'label'       => __('Layout Grid', ''),
                         'responsive'  => [
                             'placeholder' => [
-                                'default'    =>  3,
+                                'default'    =>  4,
                                 'medium'     =>  2,
                                 'responsive' =>  1,
                             ],
@@ -63,4 +63,4 @@ FLBuilder::register_module('UnityModaalGalleryModule', [
             ],
         ],
     ],
-] );
+]);

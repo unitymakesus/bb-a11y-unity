@@ -1,9 +1,9 @@
-.unity-modaal-gallery {
+.unity-lightbox-gallery {
   display: grid;
   grid-gap: 1rem;
 }
 
-.unity-modaal-gallery-item {
+.unity-lightbox-gallery-item {
   position: relative;
 
   &::before {
@@ -35,6 +35,6 @@
   }
 }
 
-.modaal-gallery-label {
+.lightbox-gallery-label {
   display: block;
 }

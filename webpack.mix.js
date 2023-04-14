@@ -45,9 +45,6 @@ mix.sass(`${src}/styles/unity-modaal-gallery.scss`, `${dist}/styles`, {
 mix.sass(`${src}/styles/unity-numbers.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
-mix.sass(`${src}/styles/unity-posts.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
 mix.sass(`${src}/styles/unity-slider.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });

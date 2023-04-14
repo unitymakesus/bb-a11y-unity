@@ -68,7 +68,6 @@ add_action('init', function () {
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-modaal/unity-modaal.php';
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-modaal-gallery/unity-modaal-gallery.php';
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-numbers/unity-numbers.php';
-        require_once BB_A11Y_UNITY_DIR . 'modules/unity-posts/unity-posts.php';
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-slider/unity-slider.php';
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-tabs/unity-tabs.php';
         require_once BB_A11Y_UNITY_DIR . 'modules/unity-video/unity-video.php';

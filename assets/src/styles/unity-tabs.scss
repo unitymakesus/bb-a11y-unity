@@ -89,4 +89,11 @@
       border-bottom: 0;
     }
   }
+
+  &__tabpanel {
+    margin: 0;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+  }
 }

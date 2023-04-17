@@ -42,7 +42,7 @@ mix.sass(`${src}/styles/unity-image-carousel.scss`, `${dist}/styles`, {
 mix.sass(`${src}/styles/unity-lightbox.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
-mix.sass(`${src}/styles/unity-modaal-gallery.scss`, `${dist}/styles`, {
+mix.sass(`${src}/styles/unity-lightbox-gallery.scss`, `${dist}/styles`, {
   implementation: require('node-sass'),
 });
 mix.sass(`${src}/styles/unity-numbers.scss`, `${dist}/styles`, {
@@ -63,7 +63,7 @@ mix.js(`${src}/scripts/unity-audio.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-jump-link.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-image-carousel.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-lightbox.js`, `${dist}/scripts`);
-mix.js(`${src}/scripts/unity-modaal-gallery.js`, `${dist}/scripts`);
+mix.js(`${src}/scripts/unity-lightbox-gallery.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-numbers.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-tabs.js`, `${dist}/scripts`);
 mix.js(`${src}/scripts/unity-video.js`, `${dist}/scripts`);

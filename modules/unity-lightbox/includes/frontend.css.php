@@ -6,7 +6,7 @@
 FLBuilderCSS::responsive_rule([
     'settings'     => $settings,
     'setting_name' => 'button_align',
-    'selector'     => ".fl-node-$id .unity-modaal__button-wrapper",
+    'selector'     => ".fl-node-$id .unity-lightbox__button-wrapper",
     'prop'         => 'text-align',
 ]);
 
@@ -16,7 +16,7 @@ FLBuilderCSS::responsive_rule([
 FLBuilderCSS::dimension_field_rule([
     'settings'     => $settings,
     'setting_name' => 'button_padding',
-    'selector'     => ".fl-node-$id a.unity-modaal__button",
+    'selector'     => ".fl-node-$id a.unity-lightbox__button",
     'unit'         => 'px',
     'props'        => [
         'padding-top'    => 'button_padding_top',
@@ -32,7 +32,7 @@ FLBuilderCSS::dimension_field_rule([
 FLBuilderCSS::typography_field_rule([
     'settings'     => $settings,
     'setting_name' => 'button_typography',
-    'selector'     => ".fl-node-$id a.unity-modaal__button, .fl-node-$id a.unity-modaal__button:visited",
+    'selector'     => ".fl-node-$id a.unity-lightbox__button, .fl-node-$id a.unity-lightbox__button:visited",
 ]);
 
 /**
@@ -41,14 +41,14 @@ FLBuilderCSS::typography_field_rule([
 FLBuilderCSS::border_field_rule([
     'settings'     => $settings,
     'setting_name' => 'button_border',
-    'selector'     => ".fl-node-$id a.unity-modaal__button",
+    'selector'     => ".fl-node-$id a.unity-lightbox__button",
 ]);
 
 ?>
 
 <?php if (!empty($settings->button_background_color)) : ?>
     <?php $rgb = $module->processHexToRgb($settings->button_background_color); ?>
-    .fl-node-<?php echo $id; ?> .unity-modaal__button {
+    .fl-node-<?php echo $id; ?> .unity-lightbox__button {
         --red: <?php echo $rgb->red(); ?>;
         --green: <?php echo $rgb->green(); ?>;
         --blue: <?php echo $rgb->blue(); ?>;
@@ -58,7 +58,7 @@ FLBuilderCSS::border_field_rule([
 
 <?php if (!empty($settings->button_background_color_interact)) : ?>
     <?php $rgb = $module->processHexToRgb($settings->button_background_color_interact); ?>
-    .fl-node-<?php echo $id; ?> .unity-modaal__button {
+    .fl-node-<?php echo $id; ?> .unity-lightbox__button {
         --interact-red: <?php echo $rgb->red(); ?>;
         --interact-green: <?php echo $rgb->green(); ?>;
         --interact-blue: <?php echo $rgb->blue(); ?>;
@@ -67,11 +67,11 @@ FLBuilderCSS::border_field_rule([
 <?php endif; ?>
 
 <?php if ($settings->button_width === 'custom') : ?>
-    .fl-node-<?php echo $id; ?> a.unity-modaal__button {
+    .fl-node-<?php echo $id; ?> a.unity-lightbox__button {
         width: <?php echo $settings->button_custom_width . $settings->button_custom_width_unit; ?>;
     }
 <?php elseif ($settings->button_width === 'full') : ?>
-    .fl-node-<?php echo $id; ?> a.unity-modaal__button {
+    .fl-node-<?php echo $id; ?> a.unity-lightbox__button {
         width: 100%;
     }
 <?php endif; ?>

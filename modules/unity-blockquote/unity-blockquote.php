@@ -54,6 +54,11 @@ FLBuilder::register_module('UnityBlockquoteModule', [
                         'label'      => __('Accent Color', ''),
                         'show_reset' => true,
                     ],
+                    'accent_width' => [
+                        'type'         => 'unit',
+                        'label'        => __('Accent Width', ''),
+                        'units'        => ['px', 'rem'],
+                    ],
                 ],
             ],
         ],

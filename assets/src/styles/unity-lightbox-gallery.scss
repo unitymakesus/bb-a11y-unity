@@ -38,3 +38,12 @@
 .lightbox-gallery-label {
   display: block;
 }
+
+.modaal-gallery-next,
+.modaal-gallery-prev {
+  position: absolute;
+
+  &:focus {
+    position: absolute;
+  }
+}

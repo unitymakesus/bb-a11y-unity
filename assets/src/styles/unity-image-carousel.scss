@@ -62,7 +62,7 @@
     color: inherit;
 
     &:focus {
-      position: inherit;
+      position: absolute;
       outline-offset: 2px;
       outline: 2px dotted currentColor;
 

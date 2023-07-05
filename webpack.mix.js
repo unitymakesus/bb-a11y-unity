@@ -24,36 +24,16 @@ mix.options({
 /**
  * CSS.
  */
-mix.sass(`${src}/styles/unity-accordion.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-audio.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-blockquote.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-jump-link.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-image-carousel.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-lightbox.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-lightbox-gallery.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-numbers.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-tabs.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
-mix.sass(`${src}/styles/unity-video.scss`, `${dist}/styles`, {
-  implementation: require('node-sass'),
-});
+mix.sass(`${src}/styles/unity-accordion.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-audio.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-blockquote.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-jump-link.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-image-carousel.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-lightbox.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-lightbox-gallery.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-numbers.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-tabs.scss`, `${dist}/styles`);
+mix.sass(`${src}/styles/unity-video.scss`, `${dist}/styles`);
 
 /**
  * JS.

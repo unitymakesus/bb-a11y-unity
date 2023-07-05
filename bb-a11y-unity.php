@@ -23,9 +23,9 @@ define('BB_A11Y_UNITY_URL', plugins_url('/', __FILE__ ));
  * @since 1.0.0
  */
 add_action('admin_notices', function () {
-    $requires = [];
+    $required = [];
 
-    if (!is_plugin_active('bb-plugin/fl-builder.php')) {
+    if (!class_exists('FLBuilder')) {
         $required[] = [
             'link' => 'https://www.wpbeaverbuilder.com/',
             'name' => __('Beaver Builder', 'bb-a11y-unity'),
@@ -36,7 +36,7 @@ add_action('admin_notices', function () {
         foreach ($required as $req) {
             ?>
             <div class="notice notice-error"><p>
-                <?php printf(__('<b>%s Plugin</b>: <a href="%s" target="_blank" rel="noreferrer noopener">%s</a> must be installed and activated.', 'bb-a11y-unity'), __('Unity Accessible Modules', 'bb-a11y-unity'), $req['link'], $req['name']); ?>
+                <?php printf(__('<strong>%s</strong>: <a href="%s" target="_blank" rel="noreferrer noopener">%s</a> must be installed and activated.', 'bb-a11y-unity'), __('Accessible Modules for Beaver Builder', 'bb-a11y-unity'), $req['link'], $req['name']); ?>
             </p></div>
             <?php
         }

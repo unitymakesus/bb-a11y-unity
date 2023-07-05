@@ -16,10 +16,10 @@
     "javascript"
   ],
   "devDependencies": {
-    "laravel-mix": "^6.0.31",
-    "node-sass": "^7.0.0",
-    "sass": "^1.42.1",
-    "sass-loader": "^12.1.0"
+    "laravel-mix": "^6.0.49",
+    "node-sass": "^9.0.0",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2"
   },
   "dependencies": {
     "@accessible360/accessible-slick": "^1.0.1",

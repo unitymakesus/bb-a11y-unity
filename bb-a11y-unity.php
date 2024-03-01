@@ -1,12 +1,11 @@
 <?php
 /**
  * Plugin Name:       Accessible Modules for Beaver Builder
- * Plugin URI:        https://github.com/unitymakesus/bb-a11y-unity
+ * Plugin URI:        https://accessiblebb.com
  * Description:       A set of accessible-first modules for Beaver Builder.
  * Version:           1.1.1
  * Author:            Unity Web Agency
  * Author URI:        https://unitywebagency.com
- * GitHub Plugin URI: unitymakesus/bb-a11y-unity
  * License:           GPL-3.0+
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       bb-a11y-unity

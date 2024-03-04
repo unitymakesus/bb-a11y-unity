@@ -3,7 +3,7 @@
  * Plugin Name:       Accessible Modules for Beaver Builder
  * Plugin URI:        https://accessiblebb.com
  * Description:       A set of accessible-first modules for Beaver Builder.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Unity Web Agency
  * Author URI:        https://unitywebagency.com
  * License:           GPL-3.0+
@@ -12,7 +12,7 @@
  * Domain Path:       /languages
  */
 
-define('BB_A11Y_UNITY_VERSION', '1.1.1');
+define('BB_A11Y_UNITY_VERSION', '1.1.2');
 define('BB_A11Y_UNITY_DIR', plugin_dir_path(__FILE__));
 define('BB_A11Y_UNITY_URL', plugins_url('/', __FILE__ ));
 

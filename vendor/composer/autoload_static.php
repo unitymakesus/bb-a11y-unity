@@ -24,7 +24,8 @@ class ComposerStaticInit8820d3fde7ef089fd9bf0b0b6f31e331
         ),
         'Appsero\\' => 
         array (
-            0 => __DIR__ . '/..' . '/appsero/client/src',
+            0 => __DIR__ . '/..' . '/appsero/updater/src',
+            1 => __DIR__ . '/..' . '/appsero/client/src',
         ),
     );
 

@@ -92,10 +92,20 @@ function appsero_init_tracker_bb_a11y_unity() {
         require_once __DIR__ . '/vendor/appsero/client/src/Client.php';
     }
 
-    $appsero = new Appsero\Client('cefb5cad-d181-4cd1-a591-6cac9dcfba63', 'Accessible Modules for Beaver Builder', __FILE__);
-    $appsero->insights()->hide_notice()->init();
-    $appsero->updater();
-    $appsero->license()->add_settings_page([
+    if (!class_exists('Appsero\Updater')) {
+        require_once __DIR__ . '/vendor/appsero/updater/src/Updater.php';
+    }
+
+    $client = new Appsero\Client('cefb5cad-d181-4cd1-a591-6cac9dcfba63', 'Accessible Modules for Beaver Builder', __FILE__);
+
+    // Manage updates.
+    Appsero\Updater::init($client);
+
+    // Active insights.
+    $client->insights()->hide_notice()->init();
+
+    // License settings page and checker.
+    $client->license()->add_settings_page([
         'type'       => 'options',
         'menu_title' => __('Accessible Modules for Beaver Builder', 'bb-a11y-unity'),
         'page_title' => __('Accessible Modules for Beaver Builder Settings', 'bb-a11y-unity'),

@@ -1,7 +1,5 @@
 {
   "require": {
-    "spatie/color": "^1.5",
-    "appsero/client": "^2.0",
-    "appsero/updater": "^1.0"
+    "spatie/color": "^1.5"
   }
 }

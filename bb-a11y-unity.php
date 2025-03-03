@@ -3,7 +3,7 @@
  * Plugin Name:       Accessible Modules for Beaver Builder
  * Plugin URI:        https://accessiblebb.com
  * Description:       A set of accessible-first modules for Beaver Builder.
- * Version:           1.1.3
+ * Version:           1.1.4
  * Author:            Unity Web Agency
  * Author URI:        https://unitywebagency.com
  * License:           GPL-3.0+
@@ -12,7 +12,7 @@
  * Domain Path:       /languages
  */
 
-define('BB_A11Y_UNITY_VERSION', '1.1.3');
+define('BB_A11Y_UNITY_VERSION', '1.1.4');
 define('BB_A11Y_UNITY_DIR', plugin_dir_path(__FILE__));
 define('BB_A11Y_UNITY_URL', plugins_url('/', __FILE__ ));
 
@@ -83,34 +83,3 @@ add_action('init', function () {
         return array_merge($settings_link, $actions);
     }, 10, 1);
 });
-
-/**
- * Init Appsero SDK.
- */
-function appsero_init_tracker_bb_a11y_unity() {
-    if (!class_exists('Appsero\Client')) {
-        require_once __DIR__ . '/vendor/appsero/client/src/Client.php';
-    }
-
-    if (!class_exists('Appsero\Updater')) {
-        require_once __DIR__ . '/vendor/appsero/updater/src/Updater.php';
-    }
-
-    $client = new Appsero\Client('cefb5cad-d181-4cd1-a591-6cac9dcfba63', 'Accessible Modules for Beaver Builder', __FILE__);
-
-    // Manage updates.
-    Appsero\Updater::init($client);
-
-    // Active insights.
-    $client->insights()->hide_notice()->init();
-
-    // License settings page and checker.
-    $client->license()->add_settings_page([
-        'type'       => 'options',
-        'menu_title' => __('Accessible Modules for Beaver Builder', 'bb-a11y-unity'),
-        'page_title' => __('Accessible Modules for Beaver Builder Settings', 'bb-a11y-unity'),
-        'menu_slug'  => 'bb-a11y-unity-settings',
-    ]);
-}
-
-appsero_init_tracker_bb_a11y_unity();
